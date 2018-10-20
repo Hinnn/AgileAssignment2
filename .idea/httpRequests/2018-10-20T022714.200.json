@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "5bc3bc87fb6fc06027456158",
+    "roomNum": "102",
+    "price": 30,
+    "type": "single"
+  },
+  {
+    "_id": "5bc3bc94fb6fc0602745615a",
+    "roomNum": "103",
+    "price": 40,
+    "type": "double"
+  },
+  {
+    "_id": "5bc3bcacfb6fc0602745615c",
+    "roomNum": "201",
+    "price": 50,
+    "type": "double"
+  },
+  {
+    "_id": "5bc3bd9e33cff4054f48a235",
+    "roomNum": "203",
+    "price": 40,
+    "type": "double",
+    "__v": 0
+  },
+  {
+    "_id": "5bc99c7d9c0b64030c0d4f9e",
+    "roomNum": "101",
+    "price": 40,
+    "type": "double",
+    "__v": 0
+  }
+]

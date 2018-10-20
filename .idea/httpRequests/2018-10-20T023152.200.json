@@ -1,0 +1,10 @@
+{
+  "message": "Room Successfully Added!",
+  "data": {
+    "_id": "5bcb2e48165973035f349662",
+    "roomNum": "102",
+    "price": 34,
+    "type": "single",
+    "__v": 0
+  }
+}

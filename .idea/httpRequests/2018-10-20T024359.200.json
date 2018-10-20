@@ -1,0 +1,13 @@
+{
+  "message": "Booking Successfully Added!",
+  "data": {
+    "_id": "5bcb311e0260e60370b43423",
+    "customerID": 10092000,
+    "paymenttype": "Visa",
+    "date": 20181029,
+    "amount": 1,
+    "roomNum": 201,
+    "price": 30,
+    "__v": 0
+  }
+}

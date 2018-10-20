@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "5bc24c3afb6fc0602744e6b8",
+    "customerID": 100000000,
+    "paymenttype": "PayPal",
+    "date": 20081022,
+    "amount": 1,
+    "roomNum": 101,
+    "price": 30
+  }
+]

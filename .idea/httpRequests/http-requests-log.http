@@ -1,0 +1,550 @@
+PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T034848.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033502.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033347.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033322.404.html
+
+###
+
+GET http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033313.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033247.200.json
+
+###
+
+PUT http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033241.404.html
+
+###
+
+PUT http://localhost:3000/rooms/5bcb2e48165973035f349662/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033233.404.html
+
+###
+
+PUT http://localhost:3000/rooms/102/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033145.404.html
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T033128.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032935.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5bcb2e48165973035f349662/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032923.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032900.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032815.200.json
+
+###
+
+GET http://localhost:3000/rooms/5bcb2e48165973035f349662
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032810.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5bcb2e48165973035f349662/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032804.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032744.200.json
+
+###
+
+PUT http://localhost:3000/rooms/103/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032738.200.json
+
+###
+
+PUT http://localhost:3000/rooms/103/price
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032623.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T032608.200.json
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T024421.200.json
+
+###
+
+DELETE http://localhost:3000/bookings/5bcb311e0260e60370b43423
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T024416.200.json
+
+###
+
+GET http://localhost:3000/bookings/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T024404.200.json
+
+###
+
+POST http://localhost:3000/bookings/10092000
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T024359.200.json
+
+###
+
+GET http://localhost:3000/bookings/10092000
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+
+<> 2018-10-20T024354.200.json
+
+###
+
+GET http://localhost:3000/bookings/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T024213.200.json
+
+###
+
+PUT http://localhost:3000/bookings/5bc24c3afb6fc0602744e6b8/amount
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T024204.200.json
+
+###
+
+GET http://localhost:3000/bookings/5bc24c3afb6fc0602744e6b8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T024147.200.json
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T024137.200.json
+
+###
+
+GET http://localhost:3000/bookings/amount
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T024132.200.json
+
+###
+
+GET http://localhost:3000/bookings/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T024129.200.json
+
+###
+
+GET http://localhost:3000/bookings/amount
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T023909.200.json
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T023847.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T023155.200.json
+
+###
+
+POST http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type":"single"}
+
+<> 2018-10-20T023152.200.json
+
+###
+
+POST http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type:"single"}
+
+<> 2018-10-20T023112.400.html
+
+###
+
+POST http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomNum":102,"price":34,"type:"single":}
+
+<> 2018-10-20T023104.400.html
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T023002.200.json
+
+###
+
+DELETE http://localhost:3000/rooms/5bc3bc87fb6fc06027456158
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022957.200.json
+
+###
+
+GET http://localhost:3000/rooms/102
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022946.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022943.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022714.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022711.200.json
+
+###
+
+DELETE http://localhost:3000/rooms/5bc3bc87fb6fc06027456158
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022705.200.json
+
+###
+
+GET http://localhost:3000/rooms/102
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022651.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T022647.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T021841.200.json
+
+###
+
+DELETE http://localhost:3000/rooms/5bc3bc87fb6fc06027456158
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T021835.200.json
+
+###
+
+GET http://localhost:3000/rooms/102
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T021822.200.json
+
+###
+
+GET http://localhost:3000/rooms/102
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+
+<> 2018-10-20T021744.200.json
+
+###
+

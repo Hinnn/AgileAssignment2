@@ -1,0 +1,9 @@
+{
+  "message": "Price Increased!",
+  "data": {
+    "_id": "5bc3bc94fb6fc0602745615a",
+    "roomNum": "103",
+    "price": 40,
+    "type": "double"
+  }
+}
