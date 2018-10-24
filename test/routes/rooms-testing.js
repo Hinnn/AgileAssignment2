@@ -8,43 +8,53 @@ chai.use(chaiHttp);
 chai.use(require('chai-things'));
 let _ = require('lodash');
 
-describe('Bookings', () => {
+    describe('Rooms', () => {
 
-        describe('GET /bookings', () => {
-            it('should return all the bookings in an array', function (done) {
+        describe('GET /rooms', () => {
+            it('should return all the rooms in an array', function (done) {
 
                 chai.request(server)
-                    .get('/bookings')
+                //chai.request(app)
+                    .get('/rooms')
                     .end((err, res) => {
                         expect(res).to.have.status(200);
                         expect(res.body).to.be.a('array');
                         expect(res.body.length).to.equal(5);
-                        let result = _.map(res.body, (booking) => {
-                            return {
-                                
-                                customerID: booking.customerID,
-                                paymenttype: booking.paymenttype,
-                                date: booking.date,
-                                amount: booking.amount,
-                                roomNum: booking.roomNum,
-                                price: booking.price
+                        let result = _.map(res.body, (room) => {
+                            return {                              
+                                roomNum: room.roomNum,
+                                price: room.price,
+                                type: room.type
                             }
                         });
                     expect(result).to.include({ 
-                        
-                        "customerID": 100000000,
-                        "paymenttype": "PayPal",
-                        "date": 20181022,
-                        "amount": 2,
-                        "roomNum": 101,
-                        "price": 30
+                        "id": "5bc3bc94fb6fc0602745615a",
+                        "roomNum": 103,
+                        "price": 50,
+                        "style":"single"
                     });
                     done();
-                }  )  ;
-        }   );
+                });
+        });
 
     });
-}    );
+   /* describe('Get /rooms/:roomNum', () => {
+        it('should return the room with a specific room number', function(done){
+            chai.request(server)
+            .get('/rooms/101')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.body.length).to.equal(1);
+                let result = _.map(res.body,(goods) => {
+                    return {roomNum : rooms.roomNum}
+                });
+                expect(result).to.include({"roomNum": 101,"price":40,"type": "double"});
+                done();
+            });
+        });
+    });*/
+
+});
 
 /*describe('POST /bookings', function () {
     it('should return add a booking', function (done) {
