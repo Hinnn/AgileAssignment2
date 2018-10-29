@@ -5,15 +5,17 @@
 ];
 
 module.exports = bookings;*/
+
 let mongoose = require('mongoose');
 
 let BookingSchema = new mongoose.Schema({
-        customerID: Number,
-        paymenttype: String,
-        date: Number,
-        amount: Number,
-        roomNum : Number,
-        price: Number
+    customerID: Number,
+    paymenttype: String,
+    date: Number,
+    amount: Number,
+    roomNum: String,
+    price: Number
+
     },
     { collection: 'bookingsdb' });
 

@@ -8,83 +8,68 @@ chai.use(chaiHttp);
 chai.use(require('chai-things'));
 let _ = require('lodash');
 
-    describe('Rooms', () => {
+    describe('Bookings', () => {
 
-        describe('GET /rooms', () => {
-            it('should return all the rooms in an array', function (done) {
+        describe('GET /bookings', () => {
+            it('should return all the bookings in an array', function (done) {
 
                 chai.request(server)
-                //chai.request(app)
-                    .get('/rooms')
+                    .get('/bookings')
                     .end((err, res) => {
                         expect(res).to.have.status(200);
                         expect(res.body).to.be.a('array');
-                        expect(res.body.length).to.equal(2);
-                        let result = _.map(res.body, (room) => {
-                            return {                              
-                                roomNum: room.roomNum,
-                                price: room.price,
-                                type: room.type
+                        expect(res.body.length).to.equal(3);
+                        let result = _.map(res.body, (booking) => {
+                            return {   
+                                customerID:booking.customerID,
+                                paymenttype:booking.paymenttype,
+                                date:booking.date,
+                                amount:booking.amount,                           
+                                roomNum: booking.roomNum,
+                                price: booking.price    
                             }
                         });
-                    expect(result).to.include({ 
-                     
-                        roomNum: "103",
-                        price: 60,
-                        type:"double"
+                    expect(result).to.include({      
+                        "customerID": 10000323,
+                        "paymenttype": "Master",
+                        "date": 20181030,
+                        "amount": 1,
+                        "roomNum": "201",
+                        "price": 35
                     });
+
                     done();
                 });
         });
-
     });
-    describe('GET /rooms/:roomNum', ()=>{
-        it('should return a room with the specific room number', function (done){
+
+    /*describe('GET /bookings/:_id', ()=>{
+        it('should return a booking with the specific id', function (done){
             chai.request(server)
-            .get('rooms/103')
+            .get('bookings/5bd5902ee7179a1b53fe9e36')
             .end((err,res) => {
                 expect(res).to.have.status(200);
                 expect(res.body.length).to.equal(1);
-                let result = _.map(res.body, (room) => {
-                    return {                         
-                        roomNum: room.roomNum,
-                        price: room.price,
-                        type: room.type
-                    }
+                let result = _.map(res.body, (booking) => {
+                    return {customerID:booking.customerID,
+                        paymenttype:booking.paymenttype,
+                        date:booking.date,
+                        amount:booking.amount,                           
+                        roomNum: booking.roomNum,
+                        price: booking.price}
                 });
-                expect(result).to.include({ 
-                    roomNum: "103",
-                    price: 60,
-                    type: "double" });
+                expect(result).to.include({customerID: '1000202' });
                 done();
                 
             });
 
         });
     });
-});
-   /* describe('Get /rooms/:roomNum', () => {
-        it('should return the room with a specific room number', function(done){
-            chai.request(server)
-            .get('/rooms/101')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res.body.length).to.equal(1);
-                let result = _.map(res.body,(goods) => {
-                    return {roomNum : rooms.roomNum}
-                });
-                expect(result).to.include({"roomNum": 101,"price":40,"type": "double"});
-                done();
-            });
-        });
-    });*/
-
-
+});*/
 
 /*describe('POST /bookings', function () {
-    it('should return add a booking', function (done) {
+    it('should return confirmation message and upsate datastore', function (done) {
         let booking = {
-            id: booking.id,
             customerID: 100000003,
             paymenttype: 'Visa',
             date: 20181201,
@@ -96,8 +81,10 @@ let _ = require('lodash');
             .post('/bookings')
             .send(booking)
             .end(function (err, res) {
-                expect(res).to.have.status(200);
-                expect(res.body).to.have.property('message').equal('Booking Added!');
+                //expect(res).to.have.status(200);
+              //  expect(res.body).to.be.an('array');
+               // expect(res.body.length).to.equal(4);
+                expect(res.body).to.have.property('message').equal('Booking Successfully Added!');
                 done();
 
             });
@@ -107,7 +94,7 @@ let _ = require('lodash');
                 .end(function (err, res) {
                     let result = _.map(res.body, (booking) => {
                         return {
-                            id: booking.id,
+        
                             customerID: booking.customerID,
                             paymenttype: booking.paymenttype,
                             date: booking.date,
@@ -117,7 +104,7 @@ let _ = require('lodash');
                         };
                     });
                     expect(result).to.include({ 
-                        id: booking.id,
+
                         customerID: 100000003,
                         paymenttype: 'Visa',
                         date: 20181201,
@@ -125,40 +112,41 @@ let _ = require('lodash');
                         roomNum: 302,
                         price: 35 
                     });
-                });
-            done();
+                    done();
         });
     });  // end-after
 }); // end-describe
-
-describe('PUT /bookings/:id/amount', () => {
+});
+});*/
+/*describe('PUT /bookings/:id/amount', () => {
     it('should return a message and the booking amount add 1', function (done) {
         chai.request(server)
-            .put('/bookings/5bc24c3afb6fc0602744e6b8/amount')
+            .put('/bookings/5bd0b9bfd338361db8663ab0/amount')
             .end(function (err, res) {
-                expect(res).to.have.status(200);
+                //expect(res).to.have.status(200);
                 let booking = res.body.data;
-                expect(booking).to.include({ customerID: 100000000, paymenttype: 'PayPal',
-                date: 20181022, amount: 3, roomNum: 101, price: 30 });
+                expect(booking).to.include({ customerID: 10000323, paymenttype: 'Master',
+                date: 20181030, amount: 3, roomNum: 201, price: 35 });
                 done();
             });
     });
-    it('should return a 404 and a message for invalid booking id', function (done) {
+    it('should return a 404 and a message for Booking NOT Found', function (done) {
         chai.request(server)
-            .put('/bookings/11009001/amount')
+            .put('/bookings/10000323/amount')
             .end(function (err, res) {
                 expect(res).to.have.status(404);
-                expect(res.body).to.have.property('message', 'Invalid Booking Id!');
+                expect(res.body).to.have.property('message', 'Booking NOT Found!');
                 done();
             });
     });
-});
+});*/
 
-describe('DELETE /bookings', function () {
+
+/*describe('DELETE /bookings', function () {
     describe('Deleted Successfully!', function () {
         it('should return confirmation message and delete a booking', function (done) {
             chai.request(server)
-                .delete('/bookings/5bc24c3afb6fc0602744e6b8')
+                .delete('/bookings/5bd4c91de7179a1b53fe826d')
                 .end(function (err, res) {
                     done();
 
@@ -170,7 +158,7 @@ describe('DELETE /bookings', function () {
                 .end(function (err, res) {
                     let result = _.map(res.body, (booking) => {
                         return {
-                            id: booking.id,
+                          //  id: booking.id,
                             customerID: booking.customerID,
                             paymenttype: booking.paymenttype,
                             date: booking.date,
@@ -179,8 +167,16 @@ describe('DELETE /bookings', function () {
                             price: booking.price
                         }
                     });
-                    expect(result).to.include({ id:'5bc25230fb6fc0602744e89f',customerID: 100000002, paymenttype: 'Visa',
-                    date: 20181022, amount: 1, roomNum: 103, price: 40 });
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('array');
+                    expect(res.body.length).to.equal(2);
+                    expect(result).to.include({   
+                        "customerID": 10000323,
+                        "paymenttype": "Master",
+                        "date": 20181030,
+                        "amount": 1,
+                        "roomNum": 201,
+                        "price": 35});
                    
                 });
             done();
@@ -193,7 +189,7 @@ describe('DELETE /bookings', function () {
             chai.request(server)
                 .delete('/bookings/546988')
                 .end(function (err, res) {
-
+                expect(res.body).to.have.property('message', 'Booking NOT DELETED!');
                     done();
 
                 });
@@ -204,7 +200,7 @@ describe('DELETE /bookings', function () {
                 .end(function (err, res) {
                     let result = _.map(res.body, (booking) => {
                         return {
-                            id: booking.id,
+                            
                             customerID: booking.customerID,
                             paymenttype: booking.paymenttype,
                             date: booking.date,
@@ -214,14 +210,21 @@ describe('DELETE /bookings', function () {
                         }
                     });
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(5);
-                    expect(result).to.include({ id:'5bc24c3afb6fc0602744e6b8',customerID: 100000000, paymenttype: 'PayPal',
-                    date: 20181022, amount: 2, roomNum: 101, price: 30 });
+                    expect(res.body.length).to.equal(3);
+                    expect(result).to.include({ 
+                        "customerID": 1000202,
+                        "paymenttype": "Visa",
+                        "date": 20181029,
+                        "amount": 2,
+                        "roomNum": 102,
+                        "price": 30});
                     
                 });
             done();
         });//end after
     });//end describe
-});  */
+});  
 
+//});*/
 
+});

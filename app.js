@@ -29,8 +29,8 @@ app.use('/users', usersRouter);
 
 app.get('/bookings', bookings.findAll);
 app.get('/bookings/amount', bookings.findTotalAmount);
-app.get('/bookings/:id', bookings.findOne);
-
+//app.get('/bookings/:id', bookings.findOne);
+app.get('/bookings/:customerID', bookings.findOne);
 app.put('/bookings/:id/amount', bookings.incrementAmount);
 
 app.post('/bookings/:customerID',bookings.addBooking);

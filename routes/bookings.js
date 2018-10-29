@@ -5,7 +5,7 @@ let router = express.Router();
 
 //let uriUtil = require('mongodb-uri');
 
-let mongodbUri ='mongodb://YueWang:bookings999@ds131373.mlab.com:31373/bookingsdb';
+let mongodbUri ='mongodb://YueWang:bookings999@ds135179.mlab.com:35179/bookings';
 
 mongoose.connect(mongodbUri);
 
@@ -42,7 +42,7 @@ router.findOne = (req, res) => {
     else
         res.send('Booking NOT Found!!');
     // Then either return the found donation or a suitable error message*/
-    Booking.find({ "_id" : req.params.id},function(err, booking) {
+    Booking.find({ "customerID" : req.params.customerID},function(err, booking) {
    // Booking.find({ "_id" : req.params._id },function(err, booking) {
         if (err)
             res.json({ message: 'Booking NOT Found!', errmsg : err } );
