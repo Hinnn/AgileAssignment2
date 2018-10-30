@@ -98,8 +98,8 @@ router.addBooking = (req, res) => {
 router.incrementAmount = (req, res) => {
     // Find the relevant booking based on params id passed in
     // Add 1 to orders property of the selected booking based on its id
-
-    Booking.findById(req.params.id, function(err,booking) {
+    res.setHeader('Content-Type', 'application/json');
+    Booking.findOneAndUpdate(req.params.customerID,req.params.amount, function(err,booking) {
         if (err)
             res.json({ message: 'Booking NOT Found!', errmsg : err } );
         else {
@@ -115,8 +115,8 @@ router.incrementAmount = (req, res) => {
 }
 
 router.deleteBooking = (req, res) => {
-    /*Delete the selected booking based on its id
-    var booking = getByValue(bookings,req.params.orderID);
+    //Delete the selected booking based on its id
+    /*var booking = getByValue(bookings,req.params.orderID);
     var index = bookings.indexOf(booking);
     var currentSize = bookings.length;
     bookings.splice(index, 1);
@@ -124,12 +124,15 @@ router.deleteBooking = (req, res) => {
         res.json({ message: 'Booking Deleted!'});
     else
         res.json({ message: 'Booking NOT Deleted!'});*/
-    Booking.findByIdAndRemove(req.params.id, function(err) {
+    //Booking.find({ "customerID" : req.params.customerID},function(err) {
+    Booking.findOneAndRemove(req.params.customerID, function(err) {
         if (err)
             res.json({ message: 'Booking NOT DELETED!', errmsg : err } );
         else
+            //remove(req.params.customerID);
             res.json({ message: 'Booking Successfully Deleted!'});
     });
+
 }
 
 router.findTotalAmount = (req, res) => {

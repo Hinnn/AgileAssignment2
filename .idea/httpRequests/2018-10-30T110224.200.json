@@ -1,0 +1,11 @@
+{
+  "message": "Booking NOT Found!",
+  "errmsg": {
+    "message": "Cast to ObjectId failed for value \"1000201\" at path \"_id\" for model \"Booking\"",
+    "name": "CastError",
+    "stringValue": "\"1000201\"",
+    "kind": "ObjectId",
+    "value": "1000201",
+    "path": "_id"
+  }
+}

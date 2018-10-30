@@ -31,11 +31,11 @@ app.get('/bookings', bookings.findAll);
 app.get('/bookings/amount', bookings.findTotalAmount);
 //app.get('/bookings/:id', bookings.findOne);
 app.get('/bookings/:customerID', bookings.findOne);
-app.put('/bookings/:id/amount', bookings.incrementAmount);
+app.put('/bookings/:customerID/amount', bookings.incrementAmount);
 
 app.post('/bookings/:customerID',bookings.addBooking);
 
-app.delete('/bookings/:id', bookings.deleteBooking);
+app.delete('/bookings/:customerID', bookings.deleteBooking);
 
 //operations on rooms
 app.get('/rooms', rooms.findAll);

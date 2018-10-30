@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "5bd8e65f8dea36093f67b04a",
+    "customerID": 10009340,
+    "paymenttype": "Direct",
+    "date": 20181203,
+    "amount": 1,
+    "roomNum": "303",
+    "price": 30
+  },
+  {
+    "_id": "5bd8e65f8dea36093f67b04b",
+    "customerID": 21000000,
+    "paymenttype": "Direct",
+    "date": 20181201,
+    "amount": 1,
+    "roomNum": "102",
+    "price": 25,
+    "__v": 0
+  }
+]

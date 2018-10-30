@@ -1,220 +1,82 @@
-PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+GET http://localhost:3000/bookings/10009340
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T034848.200.json
+<> 2018-10-30T113443.200.json
 
 ###
 
-PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T033502.200.json
+<> 2018-10-30T113434.200.json
 
 ###
 
-PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+PUT http://localhost:3000/bookings/10009340
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T033347.200.json
+<> 2018-10-30T113425.404.html
 
 ###
 
-PUT http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a/price
+GET http://localhost:3000/bookings/10009340
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T033322.404.html
+<> 2018-10-30T113421.200.json
 
 ###
 
-GET http://localhost:3000/rooms/5bc3bc94fb6fc0602745615a
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T033313.200.json
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
 ###
 
-GET http://localhost:3000/rooms
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T033247.200.json
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
 ###
 
-PUT http://localhost:3000/rooms
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T033241.404.html
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
 ###
 
-PUT http://localhost:3000/rooms/5bcb2e48165973035f349662/price
+GET http://localhost:3000/bookings/10009340
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T033233.404.html
-
-###
-
-PUT http://localhost:3000/rooms/102/price
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T033145.404.html
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T033128.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032935.200.json
-
-###
-
-PUT http://localhost:3000/rooms/5bcb2e48165973035f349662/price
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032923.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032900.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032815.200.json
-
-###
-
-GET http://localhost:3000/rooms/5bcb2e48165973035f349662
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032810.200.json
-
-###
-
-PUT http://localhost:3000/rooms/5bcb2e48165973035f349662/price
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032804.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032744.200.json
-
-###
-
-PUT http://localhost:3000/rooms/103/price
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032738.200.json
-
-###
-
-PUT http://localhost:3000/rooms/103/price
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032623.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
-
-<> 2018-10-20T032608.200.json
+<> 2018-10-30T113052.200.json
 
 ###
 
@@ -223,86 +85,53 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024421.200.json
+<> 2018-10-30T113028.200.json
 
 ###
 
-DELETE http://localhost:3000/bookings/5bcb311e0260e60370b43423
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024416.200.json
+<> 2018-10-30T112522.200.json
 
 ###
 
-GET http://localhost:3000/bookings/
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024404.200.json
+<> 2018-10-30T112516.200.json
 
 ###
 
-POST http://localhost:3000/bookings/10092000
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024359.200.json
+<> 2018-10-30T112515.200.json
 
 ###
 
-GET http://localhost:3000/bookings/10092000
+PUT http://localhost:3000/bookings/10009340/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttype":"Visa","date":20181029,"amount":1,"roomNum":201,"price":30}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024354.200.json
-
-###
-
-GET http://localhost:3000/bookings/
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"roomNum":102,"price":34,"type":"single"}
-
-<> 2018-10-20T024213.200.json
-
-###
-
-PUT http://localhost:3000/bookings/5bc24c3afb6fc0602744e6b8/amount
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"roomNum":102,"price":34,"type":"single"}
-
-<> 2018-10-20T024204.200.json
-
-###
-
-GET http://localhost:3000/bookings/5bc24c3afb6fc0602744e6b8
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"roomNum":102,"price":34,"type":"single"}
-
-<> 2018-10-20T024147.200.json
+<> 2018-10-30T112409.200.json
 
 ###
 
@@ -311,42 +140,86 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024137.200.json
+<> 2018-10-30T112354.200.json
 
 ###
 
-GET http://localhost:3000/bookings/amount
+PUT http://localhost:3000/bookings/1221211/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024132.200.json
+<> 2018-10-30T112345.200.json
 
 ###
 
-GET http://localhost:3000/bookings/
+PUT http://localhost:3000/bookings/1221211/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T024129.200.json
+<> 2018-10-30T111420.200.json
 
 ###
 
-GET http://localhost:3000/bookings/amount
+POST http://localhost:3000/bookings/1221211
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023909.200.json
+<> 2018-10-30T111413.200.json
+
+###
+
+DELETE http://localhost:3000/bookings/1221211
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T111406.200.json
+
+###
+
+GET http://localhost:3000/bookings/1221211
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T111402.200.json
+
+###
+
+POST http://localhost:3000/bookings/1221211
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T111355.200.json
+
+###
+
+POST http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181211,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T111338.404.html
 
 ###
 
@@ -355,196 +228,295 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023847.200.json
+<> 2018-10-30T111314.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/bookings
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023155.200.json
+<> 2018-10-30T111222.200.json
 
 ###
 
-POST http://localhost:3000/rooms
+GET http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type":"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023152.200.json
+<> 2018-10-30T111218.200.json
 
 ###
 
-POST http://localhost:3000/rooms
+DELETE http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type:"single"}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023112.400.html
+<> 2018-10-30T111213.200.json
 
 ###
 
-POST http://localhost:3000/rooms
+GET http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomNum":102,"price":34,"type:"single":}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023104.400.html
+<> 2018-10-30T111210.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T023002.200.json
+<> 2018-10-30T111000.200.json
 
 ###
 
-DELETE http://localhost:3000/rooms/5bc3bc87fb6fc06027456158
+GET http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
-
-<> 2018-10-20T022957.200.json
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
 ###
 
-GET http://localhost:3000/rooms/102
+DELETE http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
-
-<> 2018-10-20T022946.200.json
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
 ###
 
-GET http://localhost:3000/rooms
+DELETE http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T022943.200.json
+<> 2018-10-30T110634.500.html
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T022714.200.json
+<> 2018-10-30T110631.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+DELETE http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T022711.200.json
+<> 2018-10-30T110459.500.html
 
 ###
 
-DELETE http://localhost:3000/rooms/5bc3bc87fb6fc06027456158
+DELETE http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T022705.200.json
+<> 2018-10-30T110400.200.json
 
 ###
 
-GET http://localhost:3000/rooms/102
+GET http://localhost:3000/bookings/1000202
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T022651.200.json
+<> 2018-10-30T110356.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/bookings
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T022647.200.json
+<> 2018-10-30T110348.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+DELETE http://localhost:3000/bookings/1000201
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T021841.200.json
+<> 2018-10-30T110331.500.html
 
 ###
 
-DELETE http://localhost:3000/rooms/5bc3bc87fb6fc06027456158
+DELETE http://localhost:3000/bookings/1000201
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T021835.200.json
+<> 2018-10-30T110324.500.html
 
 ###
 
-GET http://localhost:3000/rooms/102
+DELETE http://localhost:3000/bookings/1000201
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T021822.200.json
+<> 2018-10-30T110233.500.html
 
 ###
 
-GET http://localhost:3000/rooms/102
+PUT http://localhost:3000/bookings/1000201/amount
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"customerID":0,"paymenttyoe":"Master","date":20181031,"amount":1,"roomID":301,"price":34}
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
 
-<> 2018-10-20T021744.200.json
+<> 2018-10-30T110224.200.json
+
+###
+
+PUT http://localhost:3000/bookings/1000201/amoung
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T110222.404.html
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T110206.200.json
+
+###
+
+POST http://localhost:3000/bookings/1000201
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"customerID": 0,"paymenttype": "Direct","date": 20181201,"amount": 1,"roomNum": "102","price":25}
+
+<> 2018-10-30T110159.200.json
+
+###
+
+GET http://localhost:3000/bookings/1000202
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T110149.200.json
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T110140.200.json
+
+###
+
+PUT http://localhost:3000/bookings/5bd77db8da918705737e9827/amount
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/bookings/1000202/amount
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T093330.200.json
+
+###
+
+GET http://localhost:3000/bookings/1000202
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T093323.200.json
+
+###
+
+GET http://localhost:3000/bookings/5bd77db8da918705737e9825
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T093259.200.json
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T093242.200.json
+
+###
+
+GET http://localhost:3000/bookings
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-10-30T093236.200.json
 
 ###
 
