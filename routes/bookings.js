@@ -96,55 +96,82 @@ router.addBooking = (req, res) => {
 }
 
 router.incrementAmount = (req, res) => {
+
     // Find the relevant booking based on params id passed in
-    // Add 1 to orders property of the selected booking based on its id
+
     res.setHeader('Content-Type', 'application/json');
-    Booking.findOneAndUpdate(req.params.customerID,req.params.amount, function(err,booking) {
+    let booking = new Booking({
+        //customerID: req.body.customerID,
+        paymenttype: req.body.paymenttype,
+        date: req.body.date,
+        amount: req.body.amount,
+        roomNum: req.body.roomNum,
+        price: req.body.price
+
+    });
+    Booking.update({"customerID": req.params.customerID},
+        {
+            paymenttype: req.body.paymenttype,
+            date: req.body.date,
+            amount: req.body.amount,
+            roomNum: req.body.roomNum,
+            price: req.body.price
+        },
+        function (err, booking) {
+            if (err)
+                res.json({message: 'Booking Not Edited', errmsg: err});
+            else
+                res.json({message: 'Booking Edited successfully', data: booking});
+        });
+};
+
+
+
+   /*Booking.findOneAndUpdate({customerID:{$in:req.body.customerID}}, {$inc:{amount:1}}, function (err,booking) {
+
         if (err)
-            res.json({ message: 'Booking NOT Found!', errmsg : err } );
-        else {
-            booking.amount += 1;
-            booking.save(function (err) {
-                if (err)
-                    res.json({ message: ' Booking NOT Found -  NOT Successful!', errmsg : err } );
-                else
-                    res.json({ message: 'Booking Increased!', data: booking });
+            res.json({message: 'Booking NOT Found!', errmsg: err});
+        else
+            //booking.amount += 1;
+           // booking.save(function (err) {
+               // if (err)
+                   // res.json({message: ' Amount not added!', errmsg: err});
+               // else
+
+                    res.json({message: 'Booking Increased!', data: booking});
             });
-        }
-    });
-}
+   // });
+}*/
 
-router.deleteBooking = (req, res) => {
-    //Delete the selected booking based on its id
-    /*var booking = getByValue(bookings,req.params.orderID);
-    var index = bookings.indexOf(booking);
-    var currentSize = bookings.length;
-    bookings.splice(index, 1);
-    if((currentSize - 1) === bookings.length)
-        res.json({ message: 'Booking Deleted!'});
-    else
-        res.json({ message: 'Booking NOT Deleted!'});*/
-    //Booking.find({ "customerID" : req.params.customerID},function(err) {
-    Booking.findOneAndRemove(req.params.customerID, function(err) {
-        if (err)
-            res.json({ message: 'Booking NOT DELETED!', errmsg : err } );
-        else
+
+
+    router.deleteBooking = (req, res) => {
+        //Delete the selected booking based on its id
+       // Booking.find({ "customerID" : req.params.customerID},function(err) {
+        Booking.findOneAndRemove({customerID:req.params.customerID}, function (err) {
+            if (!err) {
+                //res.json({message: 'Booking NOT Found!', errmsg: err});
+                //console.log(booking.customerID + "deleted");
+                res.json({message: 'Booking Successfully Deleted!'});
+            }
+            else
             //remove(req.params.customerID);
-            res.json({ message: 'Booking Successfully Deleted!'});
-    });
+                //res.json({message: 'Booking Successfully Deleted!'});
+                res.json({message: 'Booking NOT Found!', errmsg: err});
+        });
 
-}
+    };
 
-router.findTotalAmount = (req, res) => {
-    /*
-    let amount = getTotalAmount(bookings);
-    res.json({totalamount : amount});*/
-    Booking.find(function(err, bookings) {
-        if (err)
-            res.send(err);
-        else
-            res.json({ totalamount : getTotalAmount(bookings) });
-    });
-}
+    router.findTotalAmount = (req, res) => {
+        /*
+        let amount = getTotalAmount(bookings);
+        res.json({totalamount : amount});*/
+        Booking.find(function (err, bookings) {
+            if (err)
+                res.send(err);
+            else
+                res.json({totalamount: getTotalAmount(bookings)});
+        });
+    }
 
-module.exports = router;
+    module.exports = router;

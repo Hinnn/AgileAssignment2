@@ -1,7 +1,0 @@
-{
-  "message": "Booking NOT Found!",
-  "errmsg": {
-    "message": "Parameter \"filter\" to find() must be an object, got 10009340",
-    "name": "ObjectParameterError"
-  }
-}

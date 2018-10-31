@@ -180,47 +180,60 @@ let db = mongoose.connection;
             });
         });
 
-
-        describe('PUT /bookings/:customerID/amount', () => {
-            it('should return a message and the booking amount add 1', function (done) {
-               /* let booking = [{
-                    "customerID": 1000202,
-                    "paymenttype": "Visa",
-                    "date": 20181029,
-                    "amount": 1,
-                    "roomNum": "102",
-                    "price": 30
-                }];*/
-                chai.request(server)
-                    .put('/bookings/10000323/amount')
-                    .end(function (err, res) {
-                        //expect(res).to.have.status(200);
-                        let booking = res.body.data;
-                        expect(booking).to.include({
-                            "customerID": 1000202,
-                            "paymenttype": "Visa",
-                            "date": 20181029,
-                            "amount": 2,
-                            "roomNum": "102",
-                            "price": 30
-                        });
-                        done();
-                    });
-            });
-            it('should return a 404 and a message for Booking NOT Found -  NOT Successful', function (done) {
-                chai.request(server)
-                    .put('/bookings/10062/amount')
-                    .end(function (err, res) {
-                        //expect(res).to.have.status(404);
-                        expect(res.body).to.be.a('object');
-                       // expect(res.body).to.have.property('message', 'Booking NOT Found!');
-                        done();
-                    });
-            });
+describe('PUT/bookings/:customerID/amount',()=> {
+    describe('Booking Edited Successfully', function () {
+        it('should return a message and the booking detail is edited', function (done) {
+            let booking = {
+                "customerID": 1000202,
+                "paymenttype": "Visa",
+                "date": 20181029,
+                "amount": 1,
+                "roomNum": "102"
+            };
+            chai.request(server)
+                .put('/bookings/1000202/amount')
+                .send(booking)
+                .end(function (err, res) {
+                    expect(res).to.have.status(200);
+                    //expect(res.body).to.be.a('object');
+                    expect(res.body).to.have.property('message').equal('Booking Edited successfully');
+                    done();
+                });
         });
+    });
+    describe('Booking Not Edited', function () {
+        it('should return a message for Booking Not Edited', function (done) {
+            let booking = {
+                "customerID": 100022,
+                "paymenttype": "Visa",
+                "date": 20181029,
+                "amount": 1,
+                "roomNum": "102"
+            };
+            chai.request(server)
+                .put('/booking/1000/amount')
+                .send(booking)
+                .end(function (err, res) {
+                    expect(res).to.have.status(404);
+                    expect(res.body).to.be.a('object');
+                    done();
+                });
+        });
+    });
+});
+    after(function(done){
+        try{
+            db.collection("bookings").remove({"customerID": { $in: [1000202, 10000323, 10009340, 21000000] }});
+
+            done();
+        }catch (e) {
+            print(e);
+        }
+    });
 
 
-        /*describe('DELETE /bookings/customerID', function () {
+
+        describe('DELETE /bookings/customerID', function () {
             describe('Booking Successfully Deleted!', function () {
                 it('should return confirmation message and delete a booking', function (done) {
                     chai.request(server)
@@ -236,7 +249,6 @@ let db = mongoose.connection;
                         .end(function (err, res) {
                             let result = _.map(res.body, (booking) => {
                                 return {
-                                    //  id: booking.id,
                                     customerID: booking.customerID,
                                     paymenttype: booking.paymenttype,
                                     date: booking.date,
@@ -264,9 +276,9 @@ let db = mongoose.connection;
                     describe('Booking Not Deleted!!', function () {
                         it('should return a message for booking not deleted', function (done) {
                             chai.request(server)
-                                .delete('/bookings/19029')
+                                .delete('/booking/19029')
                                 .end(function (err, res) {
-                                    //expect(res.body).to.have.property('message', 'Booking NOT DELETED!');
+                                    expect(res).to.have.status(404);
                                     done();
 
                                 });
@@ -303,6 +315,6 @@ let db = mongoose.connection;
                     });//end describe
                 });
             });
-        });*/
+        });
     });
 

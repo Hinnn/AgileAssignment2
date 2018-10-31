@@ -32,6 +32,7 @@ app.get('/bookings/amount', bookings.findTotalAmount);
 //app.get('/bookings/:id', bookings.findOne);
 app.get('/bookings/:customerID', bookings.findOne);
 app.put('/bookings/:customerID/amount', bookings.incrementAmount);
+//app.put('/bookings/:customerID', bookings.incrementAmount);
 
 app.post('/bookings/:customerID',bookings.addBooking);
 
@@ -62,6 +63,9 @@ app.get('/customers/:customerID', customers.findOne);
 //app.post('/customers',customers.addCustomer);
 
 app.delete('/customers/:customerID', customers.deleteCustomer);
+if (process.env.NODE_ENV !== 'test') {
+    app.use(logger('dev'));
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

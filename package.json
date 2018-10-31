@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "mocha test/routes/bookings-test.js"
+    "test": "NODE_ENV=test mocha test/routes/bookings-test.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "5bd9f99ffb6fc074abb3e80f",
+    "customerID": 1000202,
+    "paymenttype": "Visa",
+    "date": 20181029,
+    "amount": 3,
+    "roomNum": "102",
+    "price": 30
+  }
+]
