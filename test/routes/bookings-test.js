@@ -181,16 +181,16 @@ let db = mongoose.connection;
         });
 
 
-       /* describe('PUT /bookings/:customerID/amount', () => {
+        describe('PUT /bookings/:customerID/amount', () => {
             it('should return a message and the booking amount add 1', function (done) {
-                let booking = [{
+               /* let booking = [{
                     "customerID": 1000202,
                     "paymenttype": "Visa",
                     "date": 20181029,
                     "amount": 1,
                     "roomNum": "102",
                     "price": 30
-                }];
+                }];*/
                 chai.request(server)
                     .put('/bookings/10000323/amount')
                     .end(function (err, res) {
@@ -220,7 +220,7 @@ let db = mongoose.connection;
         });
 
 
-        describe('DELETE /bookings/customerID', function () {
+        /*describe('DELETE /bookings/customerID', function () {
             describe('Booking Successfully Deleted!', function () {
                 it('should return confirmation message and delete a booking', function (done) {
                     chai.request(server)
