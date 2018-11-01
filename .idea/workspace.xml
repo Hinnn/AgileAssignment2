@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c4b2c3c-7b95-4488-bf05-7b21fcce9caa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/routes/bookings-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/routes/bookings-test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -85,14 +84,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3004" />
+          <entry key="js" value="3006" />
           <entry key="json" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="3004" />
+          <entry key="JavaScript" value="3006" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -104,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="362" column="2" selection-start-line="362" selection-start-column="2" selection-end-line="362" selection-end-column="2" />
+            <state relative-caret-position="212">
+              <caret line="131" column="10" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -1598,7 +1597,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137769000" />
+    <option name="totallyTimeSpent" value="137911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1787,8 +1786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="362" column="2" selection-start-line="362" selection-start-column="2" selection-end-line="362" selection-end-column="2" />
+        <state relative-caret-position="212">
+          <caret line="131" column="10" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
         </state>
       </provider>
     </entry>

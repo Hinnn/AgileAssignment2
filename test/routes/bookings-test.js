@@ -96,7 +96,7 @@ let db = mongoose.connection;
         });
         // });
 
-        /*describe('GET /bookings/:customerID', () => {
+        describe('GET /bookings/:customerID', () => {
             it('should return a booking with the specific customerID', function (done) {
                 chai.request(server)
                     .get('/bookings/10000323')
@@ -129,7 +129,7 @@ let db = mongoose.connection;
         });
 
 
-        describe('POST /bookings/:customerID', function () {
+        /*describe('POST /bookings/:customerID', function () {
             it('should return confirmation message and update datastore', function (done) {
                 let booking = {
                     "customerID": 0,
