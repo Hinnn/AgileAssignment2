@@ -96,7 +96,7 @@ let db = mongoose.connection;
         });
         // });
 
-        describe('GET /bookings/:customerID', () => {
+        /*describe('GET /bookings/:customerID', () => {
             it('should return a booking with the specific customerID', function (done) {
                 chai.request(server)
                     .get('/bookings/10000323')
@@ -360,6 +360,6 @@ describe('PUT/bookings/:customerID/amount',()=> {
                     });
 
 
-
+*/
     });
 

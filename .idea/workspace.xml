@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c4b2c3c-7b95-4488-bf05-7b21fcce9caa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/routes/bookings-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/routes/bookings-test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -13,25 +14,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="469">
-                    <caret line="300" column="61" lean-forward="true" selection-start-line="300" selection-start-column="61" selection-end-line="300" selection-end-column="61" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-179285201">
@@ -91,26 +73,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="32" />
+          <entry key="js" value="33" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="32" />
+          <entry key="JavaScript" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3000" />
+          <entry key="js" value="3004" />
           <entry key="json" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="3000" />
+          <entry key="JavaScript" value="3004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -119,6 +101,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="628">
+              <caret line="362" column="2" selection-start-line="362" selection-start-column="2" selection-end-line="362" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -137,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/routes/rooms-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="289" lean-forward="true" selection-start-line="289" selection-end-line="289" />
+            <state relative-caret-position="189">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
             </state>
           </provider>
         </entry>
@@ -192,10 +183,10 @@
         <option value="$PROJECT_DIR$/routes/bookings.js" />
         <option value="$PROJECT_DIR$/test/routes/rooms-testing.js" />
         <option value="$PROJECT_DIR$/test/routes/customers-test.js" />
-        <option value="$PROJECT_DIR$/test/routes/bookings-test.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/rooms.js" />
         <option value="$PROJECT_DIR$/test/routes/rooms-test.js" />
+        <option value="$PROJECT_DIR$/test/routes/bookings-test.js" />
       </list>
     </option>
   </component>
@@ -1607,7 +1598,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137587000" />
+    <option name="totallyTimeSpent" value="137769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1787,17 +1778,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
+    <entry file="file://$PROJECT_DIR$/test/routes/rooms-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="300" column="61" lean-forward="true" selection-start-line="300" selection-start-column="61" selection-end-line="300" selection-end-column="61" />
+        <state relative-caret-position="189">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/routes/rooms-test.js">
+    <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="628">
-          <caret line="289" lean-forward="true" selection-start-line="289" selection-end-line="289" />
+          <caret line="362" column="2" selection-start-line="362" selection-start-column="2" selection-end-line="362" selection-end-column="2" />
         </state>
       </provider>
     </entry>
