@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c4b2c3c-7b95-4488-bf05-7b21fcce9caa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test/routes/bookings-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/routes/bookings-test.js" afterDir="false" />
-    </list>
+    <list default="true" id="2c4b2c3c-7b95-4488-bf05-7b21fcce9caa" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -103,8 +101,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="131" column="10" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
+            <state relative-caret-position="339">
+              <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -1597,7 +1595,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137911000" />
+    <option name="totallyTimeSpent" value="137915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1786,8 +1784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/routes/bookings-test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="131" column="10" selection-start-line="131" selection-start-column="10" selection-end-line="131" selection-end-column="10" />
+        <state relative-caret-position="339">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
         </state>
       </provider>
     </entry>
