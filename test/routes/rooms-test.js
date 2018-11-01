@@ -79,7 +79,7 @@ describe('Rooms', () => {
     });
 
 
-    /*describe('GET /rooms/:roomNum', () => {
+    describe('GET /rooms/:roomNum', () => {
         it('should return a room with the specific roomNum', function (done) {
             chai.request(server)
                 .get('/rooms/101')
@@ -105,7 +105,7 @@ describe('Rooms', () => {
         });
     });
 
-    describe('POST /rooms', function () {
+    /*describe('POST /rooms', function () {
         it('should return confirmation message and update datastore', function (done) {
             let room = {
                 "roomNum": "201",
