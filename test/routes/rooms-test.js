@@ -144,40 +144,44 @@ describe('Rooms', () => {
                 });
         });
     });
+    after(function(done){
+        try{
+            db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
+            done();
+        }catch (e) {
+            print(e);
+        }
+    });
 
-   /* describe('PUT/bookings/:customerID/amount',()=> {
-        describe('Booking Edited Successfully', function () {
-            it('should return a message and the booking detail is edited', function (done) {
-                let booking = {
-                    "customerID": 1000202,
-                    "paymenttype": "Visa",
-                    "date": 20181029,
-                    "amount": 1,
-                    "roomNum": "102"
+    describe('PUT/rooms/:roomNum/price',()=> {
+        describe('Room Edited Successfully', function () {
+            it('should return a message and the room detail is edited', function (done) {
+                let room = {
+                    "roomNum": "101",
+                    "price": 25,
+                    "type": "single"
                 };
                 chai.request(server)
-                    .put('/bookings/1000202/amount')
-                    .send(booking)
+                    .put('/rooms/101/price')
+                    .send(room)
                     .end(function (err, res) {
                         expect(res).to.have.status(200);
                         //expect(res.body).to.be.a('object');
-                        expect(res.body).to.have.property('message').equal('Booking Edited successfully');
+                        expect(res.body).to.have.property('message').equal('Room Edited successfully');
                         done();
                     });
             });
         });
-        describe('Booking Not Edited', function () {
-            it('should return a message for Booking Not Edited', function (done) {
-                let booking = {
-                    "customerID": 100022,
-                    "paymenttype": "Visa",
-                    "date": 20181029,
-                    "amount": 1,
-                    "roomNum": "102"
+        describe('Room Not Edited', function () {
+            it('should return a message for Room Not Edited', function (done) {
+                let room = {
+                    "roomNum": "101",
+                    "price": 25,
+                    "type": "single"
                 };
                 chai.request(server)
-                    .put('/booking/1000/amount')
-                    .send(booking)
+                    .put('/room/1000/price')
+                    .send(room)
                     .end(function (err, res) {
                         expect(res).to.have.status(404);
                         expect(res.body).to.be.a('object');
@@ -188,8 +192,7 @@ describe('Rooms', () => {
     });
     after(function(done){
         try{
-            db.collection("bookings").remove({"customerID": { $in: [1000202, 10000323, 10009340, 21000000] }});
-
+            db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
             done();
         }catch (e) {
             print(e);
@@ -198,7 +201,7 @@ describe('Rooms', () => {
 
 
 
-    describe('DELETE /bookings/customerID', function () {
+   /* describe('DELETE /bookings/customerID', function () {
         describe('Booking Successfully Deleted!', function () {
             it('should return confirmation message and delete a booking', function (done) {
                 chai.request(server)
