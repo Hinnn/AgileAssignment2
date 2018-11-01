@@ -5,6 +5,17 @@ Content-Type: application/json
 
 { "paymenttype": "Visa", "date": 20181029,  "amount": 1, "roomNum": "102", "price": 30}
 
+<> 2018-11-01T112316.200.json
+
+###
+
+GET http://localhost:3000/bookings/1000202
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ "paymenttype": "Visa", "date": 20181029,  "amount": 1, "roomNum": "102", "price": 30}
+
 <> 2018-10-31T065447.200.json
 
 ###
@@ -516,15 +527,6 @@ Content-Type: application/json
 {"amount": 4}
 
 <> 2018-10-31T061122.500.html
-
-###
-
-PUT http://localhost:3000/bookings/1000202/amount
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"amount": 4}
 
 ###
 

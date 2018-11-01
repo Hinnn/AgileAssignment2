@@ -316,5 +316,50 @@ describe('PUT/bookings/:customerID/amount',()=> {
                 });
             });
         });
+
+                    describe('GET /bookings/amount', () => {
+                        it('should return the total amount of bookings', function (done) {
+                            let booking =[
+                                { "customerID": 1000202,
+                                    "paymenttype": "Visa",
+                                    "date": 20181029,
+                                    "amount": 1,
+                                    "roomNum": "102",
+                                    "price": 30},
+
+                                {
+                                    "customerID": 10000323,
+                                    "paymenttype": "Master",
+                                    "date": 20181030,
+                                    "amount": 1,
+                                    "roomNum": "201",
+                                    "price": 35
+                                },
+                                {
+                                    "customerID": 10009340,
+                                    "paymenttype": "Direct",
+                                    "date": 20181203,
+                                    "amount": 1,
+                                    "roomNum": "303",
+                                    "price": 30
+                                }
+                            ]
+
+                            chai.request(server)
+                                .get('/bookings/amount')
+                                .send(booking)
+                                .end((err, res) => {
+                                    expect(res).to.have.status(200);
+                                    expect(res.body).to.be.a('object');
+
+                                    expect(res.body).to.have.property('totalamount').equal(3);
+
+                                    done();
+                                });
+                        });
+                    });
+
+
+
     });
 
