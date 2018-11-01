@@ -1,0 +1,11 @@
+{
+  "message": "Room NOT Found!",
+  "errmsg": {
+    "message": "Cast to ObjectId failed for value \"201\" at path \"_id\" for model \"Room\"",
+    "name": "CastError",
+    "stringValue": "\"201\"",
+    "kind": "ObjectId",
+    "value": "201",
+    "path": "_id"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "message": "Room Edited successfully",
+  "data": {
+    "_id": "5bdb35bcfaf6cc069d517bb7",
+    "roomNum": "201",
+    "price": 25,
+    "type": "single"
+  }
+}

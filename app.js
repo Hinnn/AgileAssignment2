@@ -43,12 +43,12 @@ app.get('/rooms', rooms.findAll);
 //app.get('/rooms/:amount', rooms.findTotalAmount);
 app.get('/rooms/:roomNum', rooms.findOne);
 
-app.put('/rooms/:id/price', rooms.incrementPrice);
+app.put('/rooms/:roomNum/price', rooms.incrementPrice);
 
 
 app.post('/rooms',rooms.addRoom);
 
-app.delete('/rooms/:id', rooms.deleteRoom);
+app.delete('/rooms/:roomNum', rooms.deleteRoom);
 
 
 //operations on customers

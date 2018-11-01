@@ -12,7 +12,7 @@ chai.use(require('chai-things'));
 let _ = require('lodash');
 let room =[
     {     "roomNum": "101",
-        "price": 40,
+        "price": 25,
         "type": "single"},
 
     {"roomNum": "102",
@@ -69,7 +69,7 @@ describe('Rooms', () => {
                     });
                     expect(result).to.include({
                         "roomNum": "101",
-                        "price": 40,
+                        "price": 25,
                         "type": "single"
                     });
 
@@ -95,7 +95,7 @@ describe('Rooms', () => {
                     });
                     expect(result).to.include({
                         "roomNum": "101",
-                        "price": 40,
+                        "price": 25,
                         "type": "single"
                     });
                     done();
@@ -105,7 +105,7 @@ describe('Rooms', () => {
         });
     });
 
-    /*describe('POST /rooms', function () {
+    describe('POST /rooms', function () {
         it('should return confirmation message and update datastore', function (done) {
             let room = {
                 "roomNum": "201",
@@ -114,7 +114,7 @@ describe('Rooms', () => {
             };
             chai.request(server)
                 .post('/rooms')
-                .send(booking)
+                .send(room)
                 .end(function (err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('object');
@@ -145,7 +145,7 @@ describe('Rooms', () => {
         });
     });
 
-    describe('PUT/bookings/:customerID/amount',()=> {
+   /* describe('PUT/bookings/:customerID/amount',()=> {
         describe('Booking Edited Successfully', function () {
             it('should return a message and the booking detail is edited', function (done) {
                 let booking = {
