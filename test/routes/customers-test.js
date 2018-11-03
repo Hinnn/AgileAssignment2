@@ -30,6 +30,7 @@ let customer =[
         "password": "yue123"
     }
 ]
+
 let db = mongoose.connection;
 
 describe('Customers', () => {
@@ -51,9 +52,10 @@ describe('Customers', () => {
     });
     after(function (done) {
 
-        db.collection("customersdb").remove({'customerID': {$in: [1000202, 10000323, 10009340, 21000000]}});
+        db.collection("customersdb").remove({'customerID': {$in: [1000202, 10000323, 10009340,21000000]}});
         done();
     });
+
     describe('POST /customers', function () {
         it('should return confirmation message and add a customer', function (done) {
             let customer = {
@@ -95,7 +97,8 @@ describe('Customers', () => {
                 });
         });
     });
-    describe('POST /customers/:email', () => {
+
+    describe('POST /customers/:email',()=> {
         describe('Log in successfully!', function () {
             it('should return a message for customer sign in successfully', function (done) {
                 let customer = {
@@ -137,47 +140,180 @@ describe('Customers', () => {
                     });
             });
         });
-    });
-    describe('Username Not Found!', function () {
-        it('should return a message for Username Not Found!', function (done) {
-            let customer = {
-                "customerID": 1000202,
-                "name": "Yvette",
-                "email": "Yvette@wit.ie",
-                "password": "21323"
-            };
-            chai.request(server)
-                .post('/customers/Yvee@wit.ie')
-                .send(customer)
-                .end(function (err, res) {
-                    expect(res).to.have.status(200);
-                    expect(res.body).to.be.a('object');
-                    expect(res.body).to.have.property('message').equal('Username Not Found!');
-                    done();
+        describe('Username Not Found!', function () {
+            it('should return a message for Username Not Found!', function (done) {
+                let customer = {
+                    "customerID": 1000202,
+                    "name": "Yvette",
+                    "email": "Yvette@wit.ie",
+                    "password": "21323"
+                };
+                chai.request(server)
+                    .post('/customers/Yvee@wit.ie')
+                    .send(customer)
+                    .end(function (err, res) {
+                        expect(res).to.have.status(200);
+                        expect(res.body).to.be.a('object');
+                        expect(res.body).to.have.property('message').equal('Username Not Found!');
+                        done();
 
+                    });
+            });
+        });
+        describe('Wrong password!', function () {
+            it('should return a message for Wrong password!', function (done) {
+                let customer = {
+                    "customerID": 1000202,
+                    "name": "Yvette",
+                    "email": "Yvette@wit.ie",
+                    "password": "213"
+                };
+                chai.request(server)
+                    .post('/customers/Yvette@wit.ie')
+                    .send(customer)
+                    .end(function (err, res) {
+                        expect(res).to.have.status(200);
+                        expect(res.body).to.be.a('object');
+                        expect(res.body).to.have.property('message').equal('Wrong password!');
+                        done();
+
+                    });
+            });
+        });
+    });
+
+    describe('GET /customers', () => {
+        it('should return all the customers in an array', function (done) {
+            chai.request(server)
+                .get('/customers')
+                .end((err, res) => {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('array');
+                    expect(res.body.length).to.equal(4);
+                    let result = _.map(res.body, (customer) => {
+                        return {
+                            customerID: customer.customerID,
+                            name: customer.name,
+                            email: customer.email,
+                            password: customer.password
+                        }
+                    });
+                    expect(result).to.include({
+                        "customerID": 1000202,
+                        "name": "Yvette",
+                        "email": "Yvette@wit.ie",
+                        "password": "21323"
+                    });
+
+                    done();
                 });
         });
     });
-    describe('Wrong password!', function () {
-        it('should return a message for Wrong password!', function (done) {
-            let customer = {
-                "customerID": 1000202,
-                "name": "Yvette",
-                "email": "Yvette@wit.ie",
-                "password": "213"
-            };
+
+
+
+    /*describe('GET /customers/:customerID', () => {
+        it('should return a customer with the specific customerID', function (done) {
             chai.request(server)
-                .post('/customers/Yvette@wit.ie')
-                .send(customer)
-                .end(function (err, res) {
+                .get('/customers/1000202')
+                .end((err, res) => {
                     expect(res).to.have.status(200);
-                    expect(res.body).to.be.a('object');
-                    expect(res.body).to.have.property('message').equal('Wrong password!');
+                    expect(res.body.length).to.equal(1);
+                    let result = _.map(res.body, (customer) => {
+                        return {
+                            customerID: customer.customerID,
+                            name: customer.name,
+                            email: customer.email,
+                            password: customer.password
+                        }
+                    });
+                    expect(result).to.include({
+                        "customerID": 1000202,
+                        "name": "Yvette",
+                        "email": "Yvette@wit.ie",
+                        "password": "21323"
+                    });
                     done();
 
                 });
+
         });
     });
+
+    describe('DELETE /customers/:customerID', function () {
+        describe('Customer Successfully Deleted!', function () {
+            it('should return confirmation message and delete a customer', function (done) {
+                chai.request(server)
+                    .delete('/customers/1000202')
+                    .end(function (err, res) {
+                        done();
+
+                    });
+            });
+            after(function (done) {
+                chai.request(server)
+                    .get('/customers')
+                    .end(function (err, res) {
+                        let result = _.map(res.body, (customer) => {
+                            return {
+                                customerID: customer.customerID,
+                                name: customer.name,
+                                email: customer.email,
+                                password: customer.password
+                            }
+                        });
+                        expect(res).to.have.status(200);
+                        expect(res.body).to.be.a('array');
+                        expect(res.body.length).to.equal(3);
+                        expect(result).to.include({
+                            "customerID": 10000323,
+                            "name": "Shaw",
+                            "email": "shaw@gmail.com",
+                            "password": "shaw123"
+                        });
+                        done();
+                    });
+
+
+                describe('Customer Not Found!', function () {
+                    it('should return a message for customer not deleted', function (done) {
+                        chai.request(server)
+                            .delete('/customers/1202')
+
+                        done();
+
+                    });
+                    after(function (done) {
+                        chai.request(server)
+                            .get('/customers')
+                            .end(function (err, res) {
+                                let result = _.map(res.body, (customer) => {
+                                    return {
+
+                                        customerID: customer.customerID,
+                                        name: customer.name,
+                                        email: customer.email,
+                                        password: customer.password
+                                    }
+                                });
+                                expect(res.body).to.be.a('array');
+                                expect(res.body.length).to.equal(4);
+                                expect(result).to.include({
+                                    "customerID": 1000202,
+                                    "name": "Yvette",
+                                    "email": "Yvette@wit.ie",
+                                    "password": "21323"
+                                });
+
+                            });
+                        done();
+                    });//end after
+                });//end describe
+            });
+        });
+    });
+*/
+
+
 });
 
-//});
