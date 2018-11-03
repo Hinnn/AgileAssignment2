@@ -95,4 +95,89 @@ describe('Customers', () => {
                 });
         });
     });
+    describe('POST /customers/:email', () => {
+        describe('Log in successfully!', function () {
+            it('should return a message for customer sign in successfully', function (done) {
+                let customer = {
+                    "customerID": 1000202,
+                    "name": "Yvette",
+                    "email": "Yvette@wit.ie",
+                    "password": "21323"
+                };
+                chai.request(server)
+                    .post('/customers/Yvette@wit.ie')
+                    .send(customer)
+                    .end(function (err, res) {
+                        expect(res).to.have.status(200);
+                        expect(res.body).to.be.a('object');
+                        expect(res.body).to.have.property('message').equal('Log in successfully!!');
+                        done();
+
+                    });
+            });
+            after(function (done) {
+                chai.request(server)
+                    .get('/customers')
+                    .end(function (err, res) {
+                        let result = _.map(res.body, (customer) => {
+                            return {
+                                customerID: customer.customerID,
+                                name: customer.name,
+                                email: customer.email,
+                                password: customer.password
+                            };
+                        });
+                        expect(result).to.include({
+                            "customerID": 1000202,
+                            "name": "Yvette",
+                            "email": "Yvette@wit.ie",
+                            "password": "21323"
+                        });
+                        done();
+                    });
+            });
+        });
+    });
+    describe('Username Not Found!', function () {
+        it('should return a message for Username Not Found!', function (done) {
+            let customer = {
+                "customerID": 1000202,
+                "name": "Yvette",
+                "email": "Yvette@wit.ie",
+                "password": "21323"
+            };
+            chai.request(server)
+                .post('/customers/Yvee@wit.ie')
+                .send(customer)
+                .end(function (err, res) {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('object');
+                    expect(res.body).to.have.property('message').equal('Username Not Found!');
+                    done();
+
+                });
+        });
+    });
+    describe('Wrong password!', function () {
+        it('should return a message for Wrong password!', function (done) {
+            let customer = {
+                "customerID": 1000202,
+                "name": "Yvette",
+                "email": "Yvette@wit.ie",
+                "password": "213"
+            };
+            chai.request(server)
+                .post('/customers/Yvette@wit.ie')
+                .send(customer)
+                .end(function (err, res) {
+                    expect(res).to.have.status(200);
+                    expect(res.body).to.be.a('object');
+                    expect(res.body).to.have.property('message').equal('Wrong password!');
+                    done();
+
+                });
+        });
+    });
 });
+
+//});

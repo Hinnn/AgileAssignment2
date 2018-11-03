@@ -180,7 +180,7 @@ let db = mongoose.connection;
             });
         });
 
-/*describe('PUT/bookings/:customerID/amount',()=> {
+describe('PUT/bookings/:customerID/amount',()=> {
     describe('Booking Edited Successfully', function () {
         it('should return a message and the booking detail is edited', function (done) {
             let booking = {
