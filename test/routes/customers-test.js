@@ -212,7 +212,7 @@ describe('Customers', () => {
 
 
 
-    /*describe('GET /customers/:customerID', () => {
+    describe('GET /customers/:customerID', () => {
         it('should return a customer with the specific customerID', function (done) {
             chai.request(server)
                 .get('/customers/1000202')
@@ -240,7 +240,7 @@ describe('Customers', () => {
         });
     });
 
-    describe('DELETE /customers/:customerID', function () {
+    /*describe('DELETE /customers/:customerID', function () {
         describe('Customer Successfully Deleted!', function () {
             it('should return confirmation message and delete a customer', function (done) {
                 chai.request(server)
