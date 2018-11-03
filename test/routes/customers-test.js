@@ -240,7 +240,8 @@ describe('Customers', () => {
         });
     });
 
-    /*describe('DELETE /customers/:customerID', function () {
+
+    describe('DELETE /customers/customerID', function () {
         describe('Customer Successfully Deleted!', function () {
             it('should return confirmation message and delete a customer', function (done) {
                 chai.request(server)
@@ -250,10 +251,10 @@ describe('Customers', () => {
 
                     });
             });
-            after(function (done) {
-                chai.request(server)
-                    .get('/customers')
-                    .end(function (err, res) {
+                        after(function (done) {
+                        chai.request(server)
+                         .get('/customers')
+                         .end(function (err, res) {
                         let result = _.map(res.body, (customer) => {
                             return {
                                 customerID: customer.customerID,
@@ -270,18 +271,23 @@ describe('Customers', () => {
                             "name": "Shaw",
                             "email": "shaw@gmail.com",
                             "password": "shaw123"
+
                         });
                         done();
                     });
+            });
+        });
 
 
-                describe('Customer Not Found!', function () {
+                describe('Customer Not Deleted!!', function () {
                     it('should return a message for customer not deleted', function (done) {
                         chai.request(server)
-                            .delete('/customers/1202')
+                            .delete('/customer/10002')
+                            .end(function (err, res) {
+                                expect(res).to.have.status(404);
+                                done();
 
-                        done();
-
+                            });
                     });
                     after(function (done) {
                         chai.request(server)
@@ -289,7 +295,6 @@ describe('Customers', () => {
                             .end(function (err, res) {
                                 let result = _.map(res.body, (customer) => {
                                     return {
-
                                         customerID: customer.customerID,
                                         name: customer.name,
                                         email: customer.email,
@@ -311,9 +316,7 @@ describe('Customers', () => {
                 });//end describe
             });
         });
-    });
-*/
+//    });
 
-
-});
+//});
 

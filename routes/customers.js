@@ -107,11 +107,15 @@ router.deleteCustomer = (req, res) => {
     else
         res.json({ message: 'Customer NOT Deleted!'});
 }*/
-    Customer.findByIdAndRemove(req.params.customerID, function(err){
-    if(err)
-        res.json({message: 'Customer not deleted!', errmsg :err});
-    else
-        res.json({ message: 'Customer Deleted Successfully!'});
+    Customer.findOneAndRemove({customerID:req.params.customerID}, function (err) {
+        if (!err) {
+
+            res.json({message: 'Customer Successfully Deleted!'});
+        }
+        else
+        //remove(req.params.customerID);
+        //res.json({message: 'Booking Successfully Deleted!'});
+            res.json({message: 'Customer NOT Found!', errmsg: err});
 });
 }
 
