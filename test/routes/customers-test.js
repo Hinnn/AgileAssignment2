@@ -40,7 +40,7 @@ describe('Customers', () => {
             if (err)
                 console.log('Connection Error:' + err);
             else
-                console.log('Connection successful!');
+                console.log(' ');
         });
         try {
             db.collection("customersdb").insertMany(customer);

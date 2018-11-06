@@ -45,7 +45,7 @@ let db = mongoose.connection;
                 if (err)
                     console.log('Connection Error:' + err);
                 else
-                    console.log('Connection success!');
+                    console.log('  ');
             });
             try {
                 db.collection("bookingsdb").insertMany(booking);
@@ -233,7 +233,7 @@ describe('PUT/bookings/:customerID/amount',()=> {
 
 
 
-        describe('DELETE /bookings/customerID', function () {
+        describe('DELETE /bookings/:customerID', function () {
             describe('Booking Successfully Deleted!', function () {
                 it('should return confirmation message and delete a booking', function (done) {
                     chai.request(server)
@@ -317,7 +317,7 @@ describe('PUT/bookings/:customerID/amount',()=> {
             });
         });
 
-                    describe('GET /bookings/amount', () => {
+                    describe('GET /bookings/:amount', () => {
                         it('should return the total amount of bookings', function (done) {
                             let booking =[
                                 { "customerID": 1000202,

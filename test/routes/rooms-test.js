@@ -35,7 +35,7 @@ describe('Rooms', () => {
             if (err)
                 console.log('Connection Error:' + err);
             else
-                console.log('Connection success!');
+                console.log('  ');
         });
         try {
             db.collection("roomsdb").insertMany(room);
@@ -201,7 +201,7 @@ describe('Rooms', () => {
 
 
 
-    describe('DELETE /rooms/roomNum', function () {
+    describe('DELETE /rooms/:roomNum', function () {
         describe('Room Successfully Deleted!', function () {
             it('should return confirmation message and delete a room', function (done) {
                 chai.request(server)
