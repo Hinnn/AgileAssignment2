@@ -16,7 +16,7 @@ let BookingSchema = new mongoose.Schema({
     roomNum: String,
     price: Number
 
-    },
-    { collection: 'bookingsdb' });
+},
+{ collection: 'bookingsdb' });
 
 module.exports = mongoose.model('Booking', BookingSchema);

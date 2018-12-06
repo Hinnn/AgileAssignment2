@@ -1,4 +1,4 @@
-let datastore = require('../../models/customers');
+//let datastore = require('../../models/customers');
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let server = require('../../bin/www');
@@ -11,25 +11,25 @@ chai.use(chaiHttp);
 chai.use(require('chai-things'));
 let _ = require('lodash');
 let customer =[
-    {     "customerID": 1000202,
-        "name": "Yvette",
-        "email": "Yvette@wit.ie",
-        "password": "21323"
+    {     'customerID': 1000202,
+        'name': 'Yvette',
+        'email': 'Yvette@wit.ie',
+        'password': '21323'
     },
 
     {
-        "customerID": 10000323,
-        "name": "Shaw",
-        "email": "shaw@gmail.com",
-        "password": "shaw123"
+        'customerID': 10000323,
+        'name': 'Shaw',
+        'email': 'shaw@gmail.com',
+        'password': 'shaw123'
     },
     {
-        "customerID": 10009340,
-        "name": "Yue",
-        "email": "yue@gmail.com",
-        "password": "yue123"
+        'customerID': 10009340,
+        'name': 'Yue',
+        'email': 'yue@gmail.com',
+        'password': 'yue123'
     }
-]
+];
 
 let db = mongoose.connection;
 
@@ -43,26 +43,27 @@ describe('Customers', () => {
                 console.log(' ');
         });
         try {
-            db.collection("customersdb").insertMany(customer);
+            db.collection('customersdb').insertMany(customer);
         } catch (e) {
-            print(e);
+            //print(e);
+            console.log(e);
         }
         done();
 
     });
     after(function (done) {
 
-        db.collection("customersdb").remove({'customerID': {$in: [1000202, 10000323, 10009340,21000000]}});
+        db.collection('customersdb').remove({'customerID': {$in: [1000202, 10000323, 10009340,21000000]}});
         done();
     });
 
     describe('POST /customers', function () {
         it('should return confirmation message and add a customer', function (done) {
             let customer = {
-                "customerID": 21000000,
-                "name": "Angle",
-                "email": "angle@163.com",
-                "password": "angle123"
+                'customerID': 21000000,
+                'name': 'Angle',
+                'email': 'angle@163.com',
+                'password': 'angle123'
             };
             chai.request(server)
                 .post('/customers')
@@ -88,10 +89,10 @@ describe('Customers', () => {
                         };
                     });
                     expect(result).to.include({
-                        "customerID": 21000000,
-                        "name": "Angle",
-                        "email": "angle@163.com",
-                        "password": "angle123"
+                        'customerID': 21000000,
+                        'name': 'Angle',
+                        'email': 'angle@163.com',
+                        'password': 'angle123'
                     });
                     done();
                 });
@@ -102,10 +103,10 @@ describe('Customers', () => {
         describe('Log in successfully!', function () {
             it('should return a message for customer sign in successfully', function (done) {
                 let customer = {
-                    "customerID": 1000202,
-                    "name": "Yvette",
-                    "email": "Yvette@wit.ie",
-                    "password": "21323"
+                    'customerID': 1000202,
+                    'name': 'Yvette',
+                    'email': 'Yvette@wit.ie',
+                    'password': '21323'
                 };
                 chai.request(server)
                     .post('/customers/Yvette@wit.ie')
@@ -131,10 +132,10 @@ describe('Customers', () => {
                             };
                         });
                         expect(result).to.include({
-                            "customerID": 1000202,
-                            "name": "Yvette",
-                            "email": "Yvette@wit.ie",
-                            "password": "21323"
+                            'customerID': 1000202,
+                            'name': 'Yvette',
+                            'email': 'Yvette@wit.ie',
+                            'password': '21323'
                         });
                         done();
                     });
@@ -143,10 +144,10 @@ describe('Customers', () => {
         describe('Username Not Found!', function () {
             it('should return a message for Username Not Found!', function (done) {
                 let customer = {
-                    "customerID": 1000202,
-                    "name": "Yvette",
-                    "email": "Yvette@wit.ie",
-                    "password": "21323"
+                    'customerID': 1000202,
+                    'name': 'Yvette',
+                    'email': 'Yvette@wit.ie',
+                    'password': '21323'
                 };
                 chai.request(server)
                     .post('/customers/Yvee@wit.ie')
@@ -163,10 +164,10 @@ describe('Customers', () => {
         describe('Wrong password!', function () {
             it('should return a message for Wrong password!', function (done) {
                 let customer = {
-                    "customerID": 1000202,
-                    "name": "Yvette",
-                    "email": "Yvette@wit.ie",
-                    "password": "213"
+                    'customerID': 1000202,
+                    'name': 'Yvette',
+                    'email': 'Yvette@wit.ie',
+                    'password': '213'
                 };
                 chai.request(server)
                     .post('/customers/Yvette@wit.ie')
@@ -196,13 +197,13 @@ describe('Customers', () => {
                             name: customer.name,
                             email: customer.email,
                             password: customer.password
-                        }
+                        };
                     });
                     expect(result).to.include({
-                        "customerID": 1000202,
-                        "name": "Yvette",
-                        "email": "Yvette@wit.ie",
-                        "password": "21323"
+                        'customerID': 1000202,
+                        'name': 'Yvette',
+                        'email': 'Yvette@wit.ie',
+                        'password': '21323'
                     });
 
                     done();
@@ -225,13 +226,13 @@ describe('Customers', () => {
                             name: customer.name,
                             email: customer.email,
                             password: customer.password
-                        }
+                        };
                     });
                     expect(result).to.include({
-                        "customerID": 1000202,
-                        "name": "Yvette",
-                        "email": "Yvette@wit.ie",
-                        "password": "21323"
+                        'customerID': 1000202,
+                        'name': 'Yvette',
+                        'email': 'Yvette@wit.ie',
+                        'password': '21323'
                     });
                     done();
 
@@ -246,31 +247,32 @@ describe('Customers', () => {
             it('should return confirmation message and delete a customer', function (done) {
                 chai.request(server)
                     .delete('/customers/1000202')
-                    .end(function (err, res) {
+                    //.end(function (err, res) {
+                    .end(function () {
                         done();
 
                     });
             });
-                        after(function (done) {
-                        chai.request(server)
-                         .get('/customers')
-                         .end(function (err, res) {
+            after(function (done) {
+                chai.request(server)
+                    .get('/customers')
+                    .end(function (err, res) {
                         let result = _.map(res.body, (customer) => {
                             return {
                                 customerID: customer.customerID,
                                 name: customer.name,
                                 email: customer.email,
                                 password: customer.password
-                            }
+                            };
                         });
                         expect(res).to.have.status(200);
                         expect(res.body).to.be.a('array');
                         expect(res.body.length).to.equal(3);
                         expect(result).to.include({
-                            "customerID": 10000323,
-                            "name": "Shaw",
-                            "email": "shaw@gmail.com",
-                            "password": "shaw123"
+                            'customerID': 10000323,
+                            'name': 'Shaw',
+                            'email': 'shaw@gmail.com',
+                            'password': 'shaw123'
 
                         });
                         done();
@@ -279,43 +281,43 @@ describe('Customers', () => {
         });
 
 
-                describe('Customer Not Deleted!!', function () {
-                    it('should return a message for customer not deleted', function (done) {
-                        chai.request(server)
-                            .delete('/customer/10002')
-                            .end(function (err, res) {
-                                expect(res).to.have.status(404);
-                                done();
-
-                            });
-                    });
-                    after(function (done) {
-                        chai.request(server)
-                            .get('/customers')
-                            .end(function (err, res) {
-                                let result = _.map(res.body, (customer) => {
-                                    return {
-                                        customerID: customer.customerID,
-                                        name: customer.name,
-                                        email: customer.email,
-                                        password: customer.password
-                                    }
-                                });
-                                expect(res.body).to.be.a('array');
-                                expect(res.body.length).to.equal(4);
-                                expect(result).to.include({
-                                    "customerID": 1000202,
-                                    "name": "Yvette",
-                                    "email": "Yvette@wit.ie",
-                                    "password": "21323"
-                                });
-
-                            });
+        describe('Customer Not Deleted!!', function () {
+            it('should return a message for customer not deleted', function (done) {
+                chai.request(server)
+                    .delete('/customer/10002')
+                    .end(function (err, res) {
+                        expect(res).to.have.status(404);
                         done();
-                    });//end after
-                });//end describe
+
+                    });
             });
-        });
+            after(function (done) {
+                chai.request(server)
+                    .get('/customers')
+                    .end(function (err, res) {
+                        let result = _.map(res.body, (customer) => {
+                            return {
+                                customerID: customer.customerID,
+                                name: customer.name,
+                                email: customer.email,
+                                password: customer.password
+                            };
+                        });
+                        expect(res.body).to.be.a('array');
+                        expect(res.body.length).to.equal(4);
+                        expect(result).to.include({
+                            'customerID': 1000202,
+                            'name': 'Yvette',
+                            'email': 'Yvette@wit.ie',
+                            'password': '21323'
+                        });
+
+                    });
+                done();
+            });//end after
+        });//end describe
+    });
+});
 //    });
 
 //});

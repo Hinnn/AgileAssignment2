@@ -9,12 +9,12 @@ module.exports = customers;*/
 let mongoose = require('mongoose');
 
 let CustomerSchema = new mongoose.Schema({
-        customerID: Number,
-        name: String,
-        email : String,
-        password: String
+    customerID: Number,
+    name: String,
+    email : String,
+    password: String
 
-    },
-    { collection: 'customersdb' });
+},
+{ collection: 'customersdb' });
 
 module.exports = mongoose.model('Customer', CustomerSchema);

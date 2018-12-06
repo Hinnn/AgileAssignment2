@@ -8,9 +8,9 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const bookings = require("./routes/bookings");
-const rooms = require("./routes/rooms");
-const customers = require("./routes/customers");
+const bookings = require('./routes/bookings');
+const rooms = require('./routes/rooms');
+const customers = require('./routes/customers');
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -77,13 +77,13 @@ if (process.env.NODE_ENV |= 'test') {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

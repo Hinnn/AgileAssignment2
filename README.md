@@ -1,4 +1,4 @@
-# Assignment 1 - API testing and Source Control.
+Assignment 1 - API testing and Source Control.
 
 Name: Yue Wang
 

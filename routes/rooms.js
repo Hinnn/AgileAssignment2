@@ -35,21 +35,21 @@ router.findAll = (req, res) => {
 
         res.send(JSON.stringify(rooms,null,5));
     });
-}
+};
 
-function getByValue(array, roomNum) {
+/*function getByValue(array, roomNum) {
     var result  = array.filter(function(obj){return obj.roomNum == roomNum;} );
     return result ? result[0] : null; // or undefined
-}
+}*/
 router.findOne = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    Room.find({ "roomNum" : req.params.roomNum },function(err, room) {
+    Room.find({ 'roomNum' : req.params.roomNum },function(err, room) {
         if (err)
             res.json({ message: 'Room NOT Found!', errmsg : err } );
         else
             res.send(JSON.stringify(room,null,5));
     });
-}
+};
 
 
 router.addRoom = (req, res) => {
@@ -65,13 +65,13 @@ router.addRoom = (req, res) => {
         else
             res.json({ message: 'Room Successfully Added!', data: room });
     });
-}
+};
 
 router.incrementPrice = (req, res) => {
     // Find the relevant booking based on params id passed in
     // Add 1 to orders property of the selected booking based on its id
 
-   /* Room.findById(req.params.id, function(err,room) {
+    /* Room.findById(req.params.id, function(err,room) {
         if (err)
             res.json({ message: 'Room NOT Found!', errmsg : err } );
         else {
@@ -92,12 +92,13 @@ router.incrementPrice = (req, res) => {
         type: req.body.type
 
     });
-    Room.update({"roomNum": req.params.roomNum},
+    Room.update({'roomNum': req.params.roomNum},
         {
             price: req.body.price,
             type: req.body.type
         },
-        function (err, booking) {
+        //function (err, booking) {
+        function(err){
             if (err)
                 res.json({message: 'Room Not Edited', errmsg: err});
             else
@@ -116,18 +117,18 @@ router.incrementPrice = (req, res) => {
             res.json({message: 'Room Successfully Deleted!'});
     });*/
 
-    router.deleteRoom = (req, res) => {
+router.deleteRoom = (req, res) => {
 
-        Room.findOneAndRemove({roomNum:req.params.roomNum}, function (err) {
-            if (!err) {
-                res.json({message: 'Room Successfully Deleted!'});
-            }
-            else
+    Room.findOneAndRemove({roomNum:req.params.roomNum}, function (err) {
+        if (!err) {
+            res.json({message: 'Room Successfully Deleted!'});
+        }
+        else
 
-                res.json({message: 'Room NOT Found!', errmsg: err});
-        });
+            res.json({message: 'Room NOT Found!', errmsg: err});
+    });
 
-    };
+};
 
 
 

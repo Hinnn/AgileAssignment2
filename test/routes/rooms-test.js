@@ -1,4 +1,4 @@
-let datastore = require('../../models/rooms');
+//let datastore = require('../../models/rooms');
 let chai = require('chai');
 let chaiHttp = require('chai-http');
 let server = require('../../bin/www');
@@ -11,20 +11,20 @@ chai.use(chaiHttp);
 chai.use(require('chai-things'));
 let _ = require('lodash');
 let room =[
-    {     "roomNum": "101",
-        "price": 25,
-        "type": "single"},
+    {     'roomNum': '101',
+        'price': 25,
+        'type': 'single'},
 
-    {"roomNum": "102",
-    "price":30,
-    "type":"single"},
+    {'roomNum': '102',
+        'price':30,
+        'type':'single'},
 
     {
-        "roomNum": "103",
-        "price": 60,
-        "type": "double"
+        'roomNum': '103',
+        'price': 60,
+        'type': 'double'
     }
-]
+];
 
 let db = mongoose.connection;
 
@@ -38,17 +38,19 @@ describe('Rooms', () => {
                 console.log('  ');
         });
         try {
-            db.collection("roomsdb").insertMany(room);
+            db.collection('roomsdb').insertMany(room);
             console.log('Rooms insert successfully.');
         } catch (e) {
-            print(e);
+            // eslint-disable-next-line no-unused-vars   
+            //print(e);
+            console.log(e);
         }
         done();
 
     });
     after(function (done) {
 
-        db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
+        db.collection('roomsdb').remove({'roomNum': {$in: ['101', '102', '103', '201']}});
         done();
     });
 
@@ -65,12 +67,12 @@ describe('Rooms', () => {
                             roomNum: room.roomNum,
                             price: room.price,
                             type: room.type
-                        }
+                        };
                     });
                     expect(result).to.include({
-                        "roomNum": "101",
-                        "price": 25,
-                        "type": "single"
+                        'roomNum': '101',
+                        'price': 25,
+                        'type': 'single'
                     });
 
                     done();
@@ -91,12 +93,12 @@ describe('Rooms', () => {
                             roomNum: rooms.roomNum,
                             price: rooms.price,
                             type: rooms.type
-                        }
+                        };
                     });
                     expect(result).to.include({
-                        "roomNum": "101",
-                        "price": 25,
-                        "type": "single"
+                        'roomNum': '101',
+                        'price': 25,
+                        'type': 'single'
                     });
                     done();
 
@@ -108,9 +110,9 @@ describe('Rooms', () => {
     describe('POST /rooms', function () {
         it('should return confirmation message and update datastore', function (done) {
             let room = {
-                "roomNum": "201",
-                "price": 25,
-                "type":"single"
+                'roomNum': '201',
+                'price': 25,
+                'type':'single'
             };
             chai.request(server)
                 .post('/rooms')
@@ -136,9 +138,9 @@ describe('Rooms', () => {
                         };
                     });
                     expect(result).to.include({
-                        "roomNum": "201",
-                        "price": 25,
-                        "type":"single"
+                        'roomNum': '201',
+                        'price': 25,
+                        'type':'single'
                     });
                     done();
                 });
@@ -146,10 +148,12 @@ describe('Rooms', () => {
     });
     after(function(done){
         try{
-            db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
+            db.collection('roomsdb').remove({'roomNum': {$in: ['101', '102', '103', '201']}});
             done();
         }catch (e) {
-            print(e);
+            // eslint-disable-next-line no-unused-vars
+            //print(e);
+            console.log(e);
         }
     });
 
@@ -157,9 +161,9 @@ describe('Rooms', () => {
         describe('Room Edited Successfully', function () {
             it('should return a message and the room detail is edited', function (done) {
                 let room = {
-                    "roomNum": "101",
-                    "price": 25,
-                    "type": "single"
+                    'roomNum': '101',
+                    'price': 25,
+                    'type': 'single'
                 };
                 chai.request(server)
                     .put('/rooms/101/price')
@@ -175,9 +179,9 @@ describe('Rooms', () => {
         describe('Room Not Edited', function () {
             it('should return a message for Room Not Edited', function (done) {
                 let room = {
-                    "roomNum": "101",
-                    "price": 25,
-                    "type": "single"
+                    'roomNum': '101',
+                    'price': 25,
+                    'type': 'single'
                 };
                 chai.request(server)
                     .put('/room/1000/price')
@@ -192,10 +196,12 @@ describe('Rooms', () => {
     });
     after(function(done){
         try{
-            db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
+            db.collection('roomsdb').remove({'roomNum': {$in: ['101', '102', '103', '201']}});
             done();
         }catch (e) {
-            print(e);
+            // eslint-disable-next-line no-unused-vars
+            //print(e);
+            console.log(e);
         }
     });
 
@@ -206,6 +212,7 @@ describe('Rooms', () => {
             it('should return confirmation message and delete a room', function (done) {
                 chai.request(server)
                     .delete('/rooms/101')
+                    // eslint-disable-next-line no-unused-vars
                     .end(function (err, res) {
                         done();
 
@@ -220,15 +227,15 @@ describe('Rooms', () => {
                                 roomNum: room.roomNum,
                                 price: room.price,
                                 type: room.type
-                            }
+                            };
                         });
                         expect(res).to.have.status(200);
                         expect(res.body).to.be.a('array');
                         expect(res.body.length).to.equal(3);
                         expect(result).to.include({
-                            "roomNum": "102",
-                            "price":30,
-                            "type":"single"
+                            'roomNum': '102',
+                            'price':30,
+                            'type':'single'
 
                         });
                         done();
@@ -236,10 +243,12 @@ describe('Rooms', () => {
 
                 after(function(done){
                     try{
-                        db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
+                        db.collection('roomsdb').remove({'roomNum': {$in: ['101', '102', '103', '201']}});
                         done();
                     }catch (e) {
-                        print(e);
+                        // eslint-disable-next-line no-unused-vars
+                        //print(e);
+                        console.log(e);
                     }
                 });
                 describe('Room Not Deleted!!', function () {
@@ -262,14 +271,14 @@ describe('Rooms', () => {
                                         roomNum: room.roomNum,
                                         price: room.price,
                                         type: room.type
-                                    }
+                                    };
                                 });
                                 expect(res.body).to.be.a('array');
                                 expect(res.body.length).to.equal(4);
                                 expect(result).to.include({
-                                    "roomNum": "101",
-                                    "price": 25,
-                                    "type": "single"
+                                    'roomNum': '101',
+                                    'price': 25,
+                                    'type': 'single'
                                 });
 
                             });
@@ -278,10 +287,12 @@ describe('Rooms', () => {
                 });//end describe
                 after(function(done){
                     try{
-                        db.collection("roomsdb").remove({'roomNum': {$in: ['101', '102', '103', '201']}});
+                        db.collection('roomsdb').remove({'roomNum': {$in: ['101', '102', '103', '201']}});
                         done();
                     }catch (e) {
-                        print(e);
+                        // eslint-disable-next-line no-unused-vars
+                        //print(e);
+                        console.log(e);
                     }
                 });
             });

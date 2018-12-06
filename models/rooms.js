@@ -18,10 +18,10 @@ module.exports = rooms;
 let mongoose = require('mongoose');
 
 let RoomSchema = new mongoose.Schema({
-        roomNum: String,
-        price: Number,
-        type : String
-    },
-    { collection: 'roomsdb' });
+    roomNum: String,
+    price: Number,
+    type : String
+},
+{ collection: 'roomsdb' });
 
 module.exports = mongoose.model('Room', RoomSchema);

@@ -1,13 +1,15 @@
 {
     "env": {
         "node": true,
-        "mocha": true
+        "mocha": true,
+        "es6": true
     },
     "plugins": [
         "json"
     ], 
     "extends": "eslint:recommended",
     "rules": {
+        "no-console": "off",
         "indent": [
             "error",
             4
