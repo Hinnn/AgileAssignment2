@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "5c064836fb6fc038cbb292f7",
+    "customerID": 1022087,
+    "date": 20181209,
+    "amount": 2,
+    "roomNum": "204",
+    "paymenttype": "Visa",
+    "price": null
+  },
+  {
+    "_id": "5c06484afb6fc038cbb292fc",
+    "customerID": 1034237,
+    "date": 20181219,
+    "amount": 1,
+    "roomNum": "301",
+    "paymenttype": "PayPal",
+    "price": null
+  },
+  {
+    "_id": "5c06f2b88b4ac70905f0dbb7",
+    "customerID": 5343432,
+    "paymenttype": "Direct",
+    "date": 20190101,
+    "amount": 2,
+    "roomNum": "304",
+    "price": null,
+    "__v": 0
+  }
+]

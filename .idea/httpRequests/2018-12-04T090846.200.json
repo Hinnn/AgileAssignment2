@@ -1,0 +1,8 @@
+{
+  "message": "Booking Successfully Added!",
+  "data": {
+    "_id": "5c06ecdef068bd0856a0710c",
+    "price": 30,
+    "__v": 0
+  }
+}

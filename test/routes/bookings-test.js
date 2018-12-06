@@ -132,7 +132,7 @@ let db = mongoose.connection;
         describe('POST /bookings/:customerID', function () {
             it('should return confirmation message and update datastore', function (done) {
                 let booking = {
-                    "customerID": 0,
+                    "customerID": 21000000,
                     "paymenttype": "Direct",
                     "date": 20181201,
                     "amount": 1,
@@ -140,7 +140,7 @@ let db = mongoose.connection;
                     "price": 25
                 };
                 chai.request(server)
-                    .post('/bookings/21000000')
+                    .post('/bookings')
                     .send(booking)
                     .end(function (err, res) {
                         expect(res).to.have.status(200);

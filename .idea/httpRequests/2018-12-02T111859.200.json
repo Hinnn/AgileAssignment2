@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "5c03e47efb6fc038cbb1256d",
+    "customerID": 1000202,
+    "paymenttype": "Visa",
+    "date": 20181029,
+    "amount": 2,
+    "roomNum": "102",
+    "price": 30
+  },
+  {
+    "_id": "5c04442efb6fc038cbb14ad6",
+    "customerID": 1000001,
+    "paymenttype": "Visa",
+    "date": 20181229,
+    "amount": 1,
+    "roomNum": "102",
+    "price": 30
+  },
+  {
+    "_id": "5c044457fb6fc038cbb14adb",
+    "customerID": 1000002,
+    "paymenttype": "PayPal",
+    "date": 20181202,
+    "amount": 1,
+    "roomNum": "202",
+    "price": 25
+  }
+]

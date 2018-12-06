@@ -1,0 +1,21 @@
+{
+  "message": "Booking Edited successfully",
+  "data": {
+    "n": 1,
+    "nModified": 0,
+    "opTime": {
+      "ts": "6630541675154374658",
+      "t": 2
+    },
+    "electionId": "7fffffff0000000000000002",
+    "ok": 1,
+    "operationTime": "6630541675154374658",
+    "$clusterTime": {
+      "clusterTime": "6630541675154374658",
+      "signature": {
+        "hash": "oCBaIQ8y91j7BxC+8Xqrlwlmz2s=",
+        "keyId": "6580415807627460610"
+      }
+    }
+  }
+}

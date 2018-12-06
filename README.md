@@ -305,4 +305,5 @@ I have connected it with mLab. There are three collections named bookingsdb, roo
         
         Get bookings test
         $
+        https://github.com/Hinnn/hotelBooking-tests
         

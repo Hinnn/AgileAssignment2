@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');//加
-
+var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -17,6 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //app.use(logger('dev'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -24,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use(cors());
 // Our BookingRoutes
 
 app.get('/bookings', bookings.findAll);
@@ -32,12 +33,12 @@ app.get('/bookings/amount', bookings.findTotalAmount);
 //app.get('/bookings/:id', bookings.findOne);
 app.get('/bookings/:customerID', bookings.findOne);
 app.put('/bookings/:customerID/amount', bookings.incrementAmount);
-//app.put('/bookings/:customerID', bookings.incrementAmount);
 
-app.post('/bookings/:customerID',bookings.addBooking);
+//app.post('/bookings/:customerID',bookings.addBooking);
+app.post('/bookings',bookings.addBooking);
 
 app.delete('/bookings/:customerID', bookings.deleteBooking);
-
+//app.delete('/bookings/:id', bookings.deleteBooking);
 //operations on rooms
 app.get('/rooms', rooms.findAll);
 //app.get('/rooms/:amount', rooms.findTotalAmount);

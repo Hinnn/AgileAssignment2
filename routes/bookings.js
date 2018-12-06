@@ -78,10 +78,11 @@ router.addBooking = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     var booking = new Booking();
     var orderID = Math.floor((Math.random() * 1000000) + 1);
-    booking.customerID = req.params.customerID;
+   // booking.customerID = req.params.customerID;
 
     booking.orderID = req.params.orderID;
     //booking.orderID = Math.floor((Math.random() * 1000000) + 1);
+    booking.customerID = req.body.customerID;
     booking.paymenttype = req.body.paymenttype;
     booking.date = req.body.date;
     booking.amount = req.body.amount;
@@ -149,6 +150,7 @@ router.incrementAmount = (req, res) => {
         //Delete the selected booking based on its id
        // Booking.find({ "customerID" : req.params.customerID},function(err) {
         Booking.findOneAndRemove({customerID:req.params.customerID}, function (err) {
+        //Booking.findByIdAndRemove({id:req.params.id},function (err){
             if (!err) {
                 //res.json({message: 'Booking NOT Found!', errmsg: err});
                 //console.log(booking.customerID + "deleted");

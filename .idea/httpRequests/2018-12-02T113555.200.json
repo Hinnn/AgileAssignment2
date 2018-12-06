@@ -1,0 +1,8 @@
+{
+  "message": "Booking Successfully Added!",
+  "data": {
+    "_id": "5c046c5bac05760c4f7ed371",
+    "customerID": 1000202,
+    "__v": 0
+  }
+}

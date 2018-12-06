@@ -1,0 +1,12 @@
+{
+  "message": "Booking Successfully Added!",
+  "data": {
+    "_id": "5c07ad86ea2001056926b3ec",
+    "customerID": 5343432,
+    "paymenttype": "Direct",
+    "date": 20190101,
+    "amount": 2,
+    "roomNum": "304",
+    "__v": 0
+  }
+}
