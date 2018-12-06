@@ -38,7 +38,7 @@ let booking =[
 
 let db = mongoose.connection;
 
-describe('Bookings', () => {
+/*describe('Bookings', () => {
     before(function (done) {
 
         mongoose.connect(mongodbUri, {useNewUrlParser: true}, function (err) {
@@ -365,4 +365,4 @@ describe('Bookings', () => {
 
 
 });
-
+*/
