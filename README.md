@@ -1,7 +1,7 @@
 Assignment 1 - API testing and Source Control.
 
 Name: Yue Wang
-
+[![Coverage Status](https://coveralls.io/repos/github/Hinnn/AgileAssignment2/badge.svg?branch=master)](https://coveralls.io/github/Hinnn/AgileAssignment2?branch=master)
 ## Overview.
 
 Based on the web app development assignment, I added these test code to make sure that there is no mistake. It contains three test files: bookings-test, rooms-test and customers-test. I have connected it with mLab and also I use before and after functions to make sure the datas sotred in the database keep the data unchanged no matter what we do in each describe function.
