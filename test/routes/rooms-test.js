@@ -1,15 +1,23 @@
 //let datastore = require('../../models/rooms');
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
-let expect = chai.expect;
+// let chai = require('chai');
+// let chaiHttp = require('chai-http');
+// let server = require('../../bin/www');
+// let expect = chai.expect;
 let mongoose = require('mongoose');
-
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+import server from '../../bin/www';
+let expect = chai.expect;
+import datastore from '../../models/rooms';
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
+chai.use(chaiHttp);
 let mongodbUri ='mongodb://YueWang:bookings999@ds135179.mlab.com:35179/bookings';
 
-chai.use(chaiHttp);
-chai.use(require('chai-things'));
-let _ = require('lodash');
+// chai.use(chaiHttp);
+// chai.use(require('chai-things'));
+//let _ = require('lodash');
 let room =[
     {     'roomNum': '101',
         'price': 25,

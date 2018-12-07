@@ -1,7 +1,9 @@
 //let bookings = require('../models/bookings');
 const mongoose = require('mongoose');
-let Customer = require('../models/customers');
-let express = require('express');
+//let Customer = require('../models/customers');
+import Customer from '../models/customers';
+import express from 'express';
+//let express = require('express');
 let router = express.Router();
 
 let mongodbUri ='mongodb://YueWang:bookings999@ds135179.mlab.com:35179/bookings';

@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
-let Booking = require('../models/bookings');
-let express = require('express');
+//let Booking = require('../models/bookings');
+//let express = require('express');
+import Booking from '../models/bookings';
+import express from 'express';
 let router = express.Router();
+
 
 //let uriUtil = require('mongodb-uri');
 

@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 //let bookings = require('../models/bookings');
-let Room = require('../models/rooms');
-let express = require('express');
+import Room from '../models/rooms';
+import express from 'express';
+//let Room = require('../models/rooms');
+//let express = require('express');
 let router = express.Router();
 
 

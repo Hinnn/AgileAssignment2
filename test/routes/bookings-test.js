@@ -1,15 +1,26 @@
 // let datastore = require('../../models/bookings');
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
-let expect = chai.expect;
+//let chai = require('chai');
+//let chaiHttp = require('chai-http');
+//let server = require('../../bin/www');
+//let expect = chai.expect;
 let mongoose = require('mongoose');
 
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+//import server from '../../bin/www';
+var server = null ; // CHANGED
+let expect = chai.expect;
+//import datastore from '../../models/bookings';
+var datastore = null ; // CHANGED
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
+chai.use(chaiHttp);
 let mongodbUri ='mongodb://YueWang:bookings999@ds135179.mlab.com:35179/bookings';
 
-chai.use(chaiHttp);
-chai.use(require('chai-things'));
-let _ = require('lodash');
+//chai.use(chaiHttp);
+//chai.use(require('chai-things'));
+//let _ = require('lodash');
 let booking =[
     { 'customerID': 1000202,
         'paymenttype': 'Visa',
@@ -38,9 +49,12 @@ let booking =[
 
 let db = mongoose.connection;
 
-/*describe('Bookings', () => {
+describe('Bookings', () => {
     before(function (done) {
-
+        delete require.cache[require.resolve('../../bin/www')];
+        delete require.cache[require.resolve('../../models/bookings')];
+        datastore = require('../../models/bookings');
+        server = require('../../bin/www');
         mongoose.connect(mongodbUri, {useNewUrlParser: true}, function (err) {
             if (err)
                 console.log('Connection Error:' + err);
@@ -60,7 +74,8 @@ let db = mongoose.connection;
     after(function (done) {
         //db.collection("bookingsdb").remove(booking);
         db.collection('bookingsdb').remove({'customerID': {$in: [1000202, 10000323, 10009340, 21000000]}});
-        done();
+        //done();
+        server.close(done);
     });
 
     describe('GET /bookings', () => {
@@ -222,7 +237,7 @@ let db = mongoose.connection;
             });
         });
     });
-    after(function(done){
+   /* after(function(done){
         try{
             db.collection('bookings').remove({'customerID': { $in: [1000202, 10000323, 10009340, 21000000] }});
 
@@ -231,7 +246,7 @@ let db = mongoose.connection;
             //print(e);
             console.log(e);
         }
-    });
+    });*/
 
 
 
@@ -274,7 +289,7 @@ let db = mongoose.connection;
                         });
                         done();
                     });
-
+                });
 
                 describe('Booking Not Deleted!!', function () {
                     it('should return a message for booking not deleted', function (done) {
@@ -302,22 +317,21 @@ let db = mongoose.connection;
                                     };
                                 });
                                 expect(res.body).to.be.a('array');
-                                expect(res.body.length).to.equal(4);
+                                expect(res.body.length).to.equal(3);
                                 expect(result).to.include({
-                                    'customerID': 1000202,
-                                    'paymenttype': 'Visa',
-                                    'date': 20181029,
-                                    'amount': 2,
-                                    'roomNum': 102,
-                                    'price': 30
+                                    'customerID': 10000323,
+                                    'paymenttype': 'Master',
+                                    'date': 20181030,
+                                    'amount': 1,
+                                    'roomNum': '201',
+                                    'price': 35
                                 });
-
                             });
                         done();
                     });//end after
                 });//end describe
             });
-        });
+
     });
 
     describe('GET /bookings/:amount', () => {
@@ -365,4 +379,4 @@ let db = mongoose.connection;
 
 
 });
-*/
+

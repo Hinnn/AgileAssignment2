@@ -1,15 +1,24 @@
-//let datastore = require('../../models/customers');
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
-let expect = chai.expect;
-let mongoose = require('mongoose');
+import datastore from '../../models/customers';
 
+//let datastore = require('../../models/customers');
+//let chai = require('chai');
+//let chaiHttp = require('chai-http');
+//let server = require('../../bin/www');
+//let expect = chai.expect;
+let mongoose = require('mongoose');
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+import server from '../../bin/www';
+let expect = chai.expect;
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
+chai.use(chaiHttp);
 let mongodbUri ='mongodb://YueWang:bookings999@ds135179.mlab.com:35179/bookings';
 
-chai.use(chaiHttp);
-chai.use(require('chai-things'));
-let _ = require('lodash');
+//chai.use(chaiHttp);
+//chai.use(require('chai-things'));
+//let _ = require('lodash');
 let customer =[
     {     'customerID': 1000202,
         'name': 'Yvette',
