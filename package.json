@@ -8,6 +8,7 @@
     "rooms_test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/rooms-test.js",
     "customers_test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/customers-test.js",
     "coverage": "cross-env NODE_ENV=test PORT=4000 nyc mocha test/routes/bookings-test.js",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
     "test:watch": "npm run test -- --watch",
     "start": "npm-run-all test build server",
