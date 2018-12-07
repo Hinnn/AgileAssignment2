@@ -1,4 +1,12 @@
-    dist: trusty
-    language: node_js
-    node_js:
-    - stable
+dist: trusty
+language: node_js
+node_js:
+- stable
+branches:
+only: development
+notifications:
+email:
+recipients:
+- Yue1095933649@gmail.com
+on_success: never
+on_failure: always
