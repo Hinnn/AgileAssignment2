@@ -5,7 +5,7 @@ node_js:
 script:
 - npm run coverage
 after_success:
--npm run publish-coverage
+- npm run publish-coverage
 branches:
 only: development
 notifications:
